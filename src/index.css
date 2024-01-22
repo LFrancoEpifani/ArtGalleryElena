@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* GLOBALES */
+
+body {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ntr{
+  font-family: 'NTR', sans-serif;
+}
+
+
+/* NAVBAR */
+
+.bottom-rounded {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .bottom-rounded::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 2px;
+    width: 16px;
+    height: 3px; 
+    background-color: #ffffff; 
+    border-radius: 5px;
+  }
+
+
+  /* HOME */
+
+  .welcome{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+  }
+
+  
+  .art-button{
+    position: absolute;
+    top: 80%;
+    left: 30%;
+  }
