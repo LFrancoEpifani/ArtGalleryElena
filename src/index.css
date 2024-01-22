@@ -11,6 +11,12 @@ body {
   cursor: default;
 }
 
+hr{
+  width: 100%;
+  border: 0;
+  height: 2px;
+  background-color: #000;
+}
 
 html {
   box-sizing: border-box;
@@ -22,6 +28,10 @@ html {
 .container {
   max-width: 1280px;
   margin: 0 auto;
+}
+
+.play{
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .montserrat{
@@ -47,7 +57,7 @@ html {
     left: 2px;
     width: 16px;
     height: 3px; 
-    background-color: #ffffff; 
+    background-color: #000; 
     border-radius: 5px;
   }
 
@@ -56,7 +66,7 @@ html {
 
   .welcome{
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 30%;
   }
 
@@ -64,5 +74,6 @@ html {
   .art-button{
     position: absolute;
     top: 80%;
-    left: 30%;
+    left: 44%;
   }
+
