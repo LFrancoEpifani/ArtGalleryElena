@@ -15,9 +15,9 @@ const currentPath = location.pathname;
             <hr/>
             <nav className="flex justify-between items-center text-black">
             <div className="my-2 ml-1">
-             <img className='w-10' src={Logo} alt=""/>
+             <img className='w-10 object-contain' src={Logo} alt=""/>
             </div>
-    <ul className="flex items-center justify-center gap-8 font-semibold text-[14px]">
+    <ul className="flex items-center justify-center gap-8 font-semibold text-[14px] ml-12">
         <Link className={`${currentPath == "/" ? 'bottom-rounded' : ''}`} to={"/"}>
                         <li className='text-black'>HOME</li>
         </Link>
@@ -32,7 +32,7 @@ const currentPath = location.pathname;
         </Link>
     </ul>
     <ul className="flex items-end ml-14 mr-2">
-        <button className="flex items-center font-bold text-xs mr-1">
+        <button className="flex items-start font-bold text-xs mr-1">
             <p>EN</p>
             <Icon icon="ep:arrow-down-bold" />
         </button>

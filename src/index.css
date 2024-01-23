@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   cursor: default;
+  overflow: hidden;
 }
 
 hr{
@@ -54,7 +55,7 @@ html {
     content: '';
     position: absolute;
     bottom: -3px;
-    left: 2px;
+    left: 1px;
     width: 16px;
     height: 3px; 
     background-color: #000; 
@@ -64,16 +65,55 @@ html {
 
   /* HOME */
 
-  .welcome{
-    position: absolute;
-    top: 30%;
-    left: 30%;
-  }
 
-  
-  .art-button{
-    position: absolute;
-    top: 80%;
-    left: 44%;
-  }
+  /* KEYFRAME */
+  @keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
+
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideInFromBottom {
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.animate-slideInFromBottom {
+  animation: slideInFromBottom 1s ease forwards;
+}
+
+
+.animate-slideInFromLeft {
+    animation: slideInFromLeft 1s ease forwards;
+}
+
+.animate-slideInFromRight {
+    animation: slideInFromRight 1s ease forwards;
+}
+
+ 
