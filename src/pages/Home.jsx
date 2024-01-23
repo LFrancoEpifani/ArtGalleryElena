@@ -19,7 +19,7 @@ export default function Home() {
     <main className=''>
     <Header/>
     <HomeGallery photos={photos}/>
-    <div className='play absolute top-67 left-92 2xl:top-86 2xl:right-100 animate-slideInFromBottom font-normal text-[50px] text-black uppercase text-center tracking-wider border-h1'>
+    <div className='play absolute top-69 left-92 2xl:top-86 2xl:right-100 animate-slideInFromBottom font-normal text-[50px] text-black uppercase text-center tracking-wider border-h1'>
         <h1>Art Gallery Elena</h1>
     </div>
     </main>

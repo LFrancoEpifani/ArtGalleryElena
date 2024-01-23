@@ -1,7 +1,7 @@
 import React from 'react'
 import { Icon } from '@iconify/react';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../assets/LogoBlack.png'
+import Logo from '../assets/FirmaElena.jpg'
 
 
 export default function Header() {
@@ -15,7 +15,7 @@ const currentPath = location.pathname;
             <hr/>
             <nav className="flex justify-between items-center text-black">
             <div className="my-2 ml-1">
-             <img className='w-10 object-contain' src={Logo} alt=""/>
+             <img className='w-24 object-contain' src={Logo} alt=""/>
             </div>
     <ul className="flex items-center justify-center gap-8 font-semibold text-[14px] ml-12">
         <Link className={`${currentPath == "/" ? 'bottom-rounded' : ''}`} to={"/"}>
