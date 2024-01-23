@@ -3,11 +3,11 @@ import HomeGallery from '../components/HomeGallery'
 import Buda from '../assets/Buda.jpg'
 import AdanEva from '../assets/AdanEva.jpg'
 import Elena from '../assets/Elena.jpg'
-import Drop from '../assets/Drop.jpg'
 import Sevillana from '../assets/Sevillana.jpg'
 import Llanto from '../assets/Llanto.jpg'
 import HombreSentado from '../assets/HombreSentado.jpg'
 import ToreroMandala from '../assets/ToreroMandala.jpg'
+import Drop from '../assets/Drop.jpg'
 
 import Header from '../components/Header'
 
