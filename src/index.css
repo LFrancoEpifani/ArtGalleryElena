@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* GLOBALES */
 
 body {
@@ -11,21 +10,24 @@ body {
   cursor: default;
 }
 
-main{
+main {
   overflow: hidden;
 }
 
-hr{
+/*
+ hr {
   width: 100%;
   border: 0;
   height: 2px;
   background-color: #000;
-}
+} */
 
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -34,75 +36,69 @@ html {
   margin: 0 auto;
 }
 
-.play{
-  font-family: 'Cormorant Garamond', serif;
+.font-cormorant {
+  font-family: "Cormorant Garamond", serif;
 }
 
-.montserrat{
-    font-family: 'Montserrat', sans-serif;
+.montserrat {
+  font-family: "Montserrat", sans-serif;
 }
 
-.ntr{
-  font-family: 'NTR', sans-serif;
+.ntr {
+  font-family: "NTR", sans-serif;
 }
-
 
 /* NAVBAR */
 
 .bottom-rounded {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .bottom-rounded::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 1px;
-    width: 16px;
-    height: 3px; 
-    background-color: #000; 
-    border-radius: 5px;
-  }
-
-
-  /* HOME */
-
-
-  /* KEYFRAME */
-  @keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  position: relative;
+  display: inline-block;
 }
 
+.bottom-rounded::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 1px;
+  width: 16px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 5px;
+}
 
+/* HOME */
+
+/* KEYFRAME */
+/* @keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 @keyframes slideInFromRight {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
-
 
 @keyframes slideInFromBottom {
   0% {
-      transform: translateY(100%);
-      opacity: 0;
+    transform: translateY(100%);
+    opacity: 0;
   }
   100% {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -110,13 +106,10 @@ html {
   animation: slideInFromBottom 1s ease forwards;
 }
 
-
 .animate-slideInFromLeft {
-    animation: slideInFromLeft 1s ease forwards;
+  animation: slideInFromLeft 1s ease forwards;
 }
 
 .animate-slideInFromRight {
-    animation: slideInFromRight 1s ease forwards;
-}
-
- 
+  animation: slideInFromRight 1s ease forwards;
+} */
