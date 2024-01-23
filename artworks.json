@@ -1,0 +1,18 @@
+[
+    {
+      "id": "1",
+      "name": "David",
+      "price": "$200",
+      "size": "60x40cm",
+      "image": "./src/assets/David.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Buda",
+      "price": "$350",
+      "size": "50x70cm",
+      "image": "./src/assets/Buda.jpg"
+    }
+   
+  ]
+  

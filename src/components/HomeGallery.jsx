@@ -7,14 +7,14 @@ export default function HomeGallery({ photos }) {
             
             const animationClass = index < 4 ? 'animate-slideInFromLeft border-b-2 border-black' : 'animate-slideInFromRight border-t-2 border-black';
             return (
-                <div key={index} className={`relative col-span-1 w-full h-[225px] object-cover ${animationClass}`}>
+                <div key={index} className={`relative col-span-1 w-full h-[225px] 2xl:h-[300px] ${animationClass}`}>
                     <img
                         src={photo}
                         alt={`Imagen ${index + 1}`}
-                        className='w-full h-full object-cover'
+                        className='w-full h-full object-fill'
                         loading="lazy"
                     />
-                    <div className="absolute top-0 left-0 w-full h-[225px] bg-black bg-opacity-35"></div>
+                    <div className="absolute top-0 left-0 w-full h-[225px] bg-black bg-opacity-35 2xl:h-[300px]"></div>
                 </div>
             );
         })}
