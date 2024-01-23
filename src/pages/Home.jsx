@@ -7,13 +7,13 @@ import Sevillana from '../assets/Sevillana.jpg'
 import Llanto from '../assets/Llanto.jpg'
 import HombreSentado from '../assets/HombreSentado.jpg'
 import ToreroMandala from '../assets/ToreroMandala.jpg'
-import Drop from '../assets/Drop.jpg'
+import Hand from '../assets/Hand.jpg'
 
 import Header from '../components/Header'
 
 export default function Home() {
     const photos = [
-      Drop, Sevillana, ToreroMandala, Buda, AdanEva, HombreSentado, Llanto, Elena
+      Hand, Sevillana, ToreroMandala, Buda, AdanEva, HombreSentado, Llanto, Elena
     ]
   return (
     <main className=''>
