@@ -1,10 +1,31 @@
 [
     {
       "id": "1",
-      "name": "David",
-      "price": "$200",
-      "size": "60x40cm",
+      "name": "Observer",
+      "price": "3600€",
+      "size": "Mixed technique. 140 x 90 cm",
       "image": "./src/assets/David.jpg"
+    },
+    {
+      "id": "1",
+      "name": "Drop",
+      "price": "750€",
+      "size": "Acrylic. 40 x 50 cm",
+      "image": "./src/assets/drop.jpg"
+    },
+    {
+      "id": "1",
+      "name": "Hope",
+      "price": "750€",
+      "size": "Acrylic. 40 x 50 cm",
+      "image": "./src/assets/hand.jpg"
+    },
+    {
+      "id": "1",
+      "name": "Flamenco",
+      "price": "1100€",
+      "size": "Acrylic. 120 x 80 cm",
+      "image": "./src/assets/sevillana.jpg"
     }
    
   ]

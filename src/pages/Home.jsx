@@ -16,12 +16,12 @@ export default function Home() {
       Drop, Sevillana, ToreroMandala, Buda, AdanEva, HombreSentado, Llanto, Elena
     ]
   return (
-    <div className=''>
+    <main className=''>
     <Header/>
     <HomeGallery photos={photos}/>
-    <main className='play absolute top-67 left-92 2xl:top-86 2xl:right-100 animate-slideInFromBottom font-normal text-[50px] text-black uppercase text-center tracking-wider border-h1'>
+    <div className='play absolute top-67 left-92 2xl:top-86 2xl:right-100 animate-slideInFromBottom font-normal text-[50px] text-black uppercase text-center tracking-wider border-h1'>
         <h1>Art Gallery Elena</h1>
-    </main>
     </div>
+    </main>
   )
 }
