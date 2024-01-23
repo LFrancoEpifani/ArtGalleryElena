@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 
-export default function HomeGallery({ photos, animationImages }) {
+export default function HomeGallery({ photos, animationImages, border }) {
   return (
-    <div className="h-[42vh] grid grid-cols-1 grid-rows-1 lg:flex lg:gap-y-12 ">
+    <div className={`h-[42vh] grid grid-cols-1 grid-rows-1 lg:flex lg:gap-y-12  ${border} `}>
       {photos.map((photo, index) => (
         <motion.div
           initial="hidden"

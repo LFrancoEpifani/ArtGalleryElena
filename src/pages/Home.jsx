@@ -22,29 +22,29 @@ export default function Home() {
   const photos2 = [Horse, HombreSentado, Llanto, Elena];
 
   const title = "Art Gallery Elena";
-  const words = title.split("");
+  const letters = title.split("");
 
   return (
     <main className="">
       <Header />
-      <HomeGallery photos={photos1} animationImages={animationLeftImages} />
+      <HomeGallery photos={photos1} animationImages={animationLeftImages} border="border-b-2 border-black" />
       <motion.div
         className="h-[8vh] flex justify-center items-center "
         variants={container}
         initial="hidden"
         animate="visible"
       >
-        {words.map((word, index) => (
+        {letters.map((letter, index) => (
           <motion.span
             className={` font-cormorant font-normal text-[50px] text-black uppercase text-center tracking-tighter `}
             key={index}
             variants={child}
           >
-            {word + (index < words.length - 1 ? "\u00A0" : "")}
+            {letter + (index < letters.length - 1 ? "\u00A0" : "")}
           </motion.span>
         ))}
       </motion.div>
-      <HomeGallery photos={photos2} animationImages={animationRightImages} />
+      <HomeGallery photos={photos2} animationImages={animationRightImages} border="border-t-2 border-black" />
     </main>
   );
 }
