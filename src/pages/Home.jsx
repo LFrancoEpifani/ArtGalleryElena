@@ -1,7 +1,7 @@
 import React from 'react'
 import HomeGallery from '../components/HomeGallery'
 import Buda from '../assets/Buda.jpg'
-import AdanEva from '../assets/AdanEva.jpg'
+import Horse from '../assets/Horse.jpg'
 import Elena from '../assets/Elena.jpg'
 import Sevillana from '../assets/Sevillana.jpg'
 import Llanto from '../assets/Llanto.jpg'
@@ -13,7 +13,7 @@ import Header from '../components/Header'
 
 export default function Home() {
     const photos = [
-      BigPaint, Sevillana, ToreroMandala, Buda, AdanEva, HombreSentado, Llanto, Elena
+      BigPaint, Sevillana, ToreroMandala, Buda, Horse, HombreSentado, Llanto, Elena
     ]
   return (
     <main className=''>
