@@ -16,7 +16,7 @@ export default function Home() {
       Hand, Sevillana, ToreroMandala, Buda, AdanEva, HombreSentado, Llanto, Elena
     ]
   return (
-    <main className=''>
+    <main className='bg-[#E3E0D7]'>
     <Header/>
     <HomeGallery photos={photos}/>
     <div className='play absolute top-67 left-92 2xl:top-86 2xl:right-100 animate-slideInFromBottom font-normal text-[50px] text-black uppercase text-center tracking-wider border-h1'>
