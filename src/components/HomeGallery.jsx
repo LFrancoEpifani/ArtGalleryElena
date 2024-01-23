@@ -11,7 +11,7 @@ export default function HomeGallery({ photos }) {
                     <img
                         src={photo}
                         alt={`Imagen ${index + 1}`}
-                        className='w-full h-full object-fill'
+                        className='w-full h-full object-cover'
                         loading="lazy"
                     />
                     <div className="absolute top-0 left-0 w-full h-[225px] bg-black bg-opacity-35 2xl:h-[300px]"></div>

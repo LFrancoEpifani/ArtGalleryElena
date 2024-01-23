@@ -7,16 +7,16 @@ import Sevillana from '../assets/Sevillana.jpg'
 import Llanto from '../assets/Llanto.jpg'
 import HombreSentado from '../assets/HombreSentado.jpg'
 import ToreroMandala from '../assets/ToreroMandala.jpg'
-import Drop from '../assets/Drop.jpg'
+import BigPaint from '../assets/BigPaint.png'
 
 import Header from '../components/Header'
 
 export default function Home() {
     const photos = [
-      Drop, Sevillana, ToreroMandala, Buda, AdanEva, HombreSentado, Llanto, Elena
+      BigPaint, Sevillana, ToreroMandala, Buda, AdanEva, HombreSentado, Llanto, Elena
     ]
   return (
-    <main className='bg-[#f3f1eb]'>
+    <main className=''>
     <Header/>
     <HomeGallery photos={photos}/>
     <div className='play absolute top-67 left-92 2xl:top-86 2xl:right-100 animate-slideInFromBottom font-normal text-[50px] text-black uppercase text-center tracking-wider border-h1'>
