@@ -16,16 +16,22 @@ import {
   container,
 } from "../motion/variants";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Home() {
-  const photos1 = [BigPaint, Sevillana, ToreroMandala, Buda];
+  const photos1 = [BigPaint, Sevillana, Buda, ToreroMandala];
   const photos2 = [Horse, HombreSentado, Llanto, Elena];
+
+  const photos3 = [BigPaint, Sevillana, Buda, ToreroMandala, Horse, HombreSentado, Llanto, Elena];
+
 
   const title = "Art Gallery Elena";
   const letters = title.split("");
 
+  const [mobileView, setMobileView] = useState('')
+
   return (
-    <main className="">
+    <main className="lg:scroll">
       <Header />
       <HomeGallery photos={photos1} animationImages={animationLeftImages} border="border-b-2 border-black" />
       <motion.div
@@ -36,7 +42,7 @@ export default function Home() {
       >
         {letters.map((letter, index) => (
           <motion.span
-            className={` font-cormorant font-normal text-[50px] text-black uppercase text-center tracking-tighter `}
+            className={` font-cormorant font-normal lg:text-[50px] text-black uppercase text-center tracking-tighter `}
             key={index}
             variants={child}
           >
