@@ -54,7 +54,7 @@ export default function Home() {
     <div className="block md:hidden">
     <Header />
     <motion.div
-        className="h-[8vh] flex justify-center items-center my-10"
+        className="h-[8vh] flex justify-center items-center my-8"
         variants={container}
         initial="hidden"
         animate="visible"
@@ -70,8 +70,8 @@ export default function Home() {
         ))}
       </motion.div>
     <Carousel photos={photos3}/>
-   <div className="m-auto">
-      <button className="bg-black text-white w-32 h-8">
+   <div className="flex justify-center items-center my-12">
+      <button className="bg-white text-black border border-black w-44 h-12 rounded-md font-cormorant font-semibold uppercase">
         Collections
       </button>
    </div>

@@ -21,7 +21,7 @@ export default function Carousel({ photos }) {
   return (
     <Slider {...settings}>
       {photos.map((image, index) => (
-        <div key={index} className='mt-10 px-1'>
+        <div key={index} className='mt-8 px-1'>
           <img className='object-cover w-full h-[280px] m-auto border border-black' src={image} alt={`Slide ${index}`} />
         </div>
       ))}
