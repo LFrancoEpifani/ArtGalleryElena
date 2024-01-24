@@ -17,6 +17,8 @@ import {
 } from "../motion/variants";
 import { motion } from "framer-motion";
 import Carousel from "../components/Carousel";
+import Collections from "./Collections";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const photos1 = [BigPaint, Sevillana, Buda, ToreroMandala];
@@ -71,9 +73,11 @@ export default function Home() {
       </motion.div>
     <Carousel photos={photos3}/>
    <div className="flex justify-center items-center my-12">
+      <Link to={"/collection"}>
       <button className="bg-white text-black border border-black w-44 h-12 rounded-md font-cormorant font-semibold uppercase">
         Collections
       </button>
+      </Link>
    </div>
     </div>
     </main>
