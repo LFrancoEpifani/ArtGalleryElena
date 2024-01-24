@@ -70,6 +70,11 @@ export default function Home() {
         ))}
       </motion.div>
     <Carousel photos={photos3}/>
+   <div className="m-auto">
+      <button className="bg-black text-white w-32 h-8">
+        Collections
+      </button>
+   </div>
     </div>
     </main>
   );

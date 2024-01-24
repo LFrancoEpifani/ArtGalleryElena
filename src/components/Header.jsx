@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="montserrat h-[8vh] flex justify-between items-center text-black px-1 md:px-4 border-2 border-y-black">
+      <nav className="montserrat h-[8vh] flex justify-between items-center text-black px-1 border-2 border-y-black">
         <img className="w-22 lg:w-28 h-full object-contain" src={Logo} alt="" />
         <ul className="hidden md:flex items-center justify-center gap-8 font-semibold text-[14px] ">
           <Link

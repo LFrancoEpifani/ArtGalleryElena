@@ -19,7 +19,7 @@ export default function Burger() {
   const currentPath = location.pathname;
 
   return (
-    <div>
+    <div className='block md:hidden'>
        <button className='flex items-center' onClick={handleOpenMenu}>
          <Icon className='text-2xl' icon="ic:baseline-menu" />
        </button>

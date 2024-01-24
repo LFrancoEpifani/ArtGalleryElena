@@ -14,7 +14,6 @@ export default function Carousel({ photos }) {
     cssEase: "linear",
     centerMode: true,
     lazyLoad: true,
-    responsive: true,
   };
 
   
