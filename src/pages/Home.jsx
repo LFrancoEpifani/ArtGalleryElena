@@ -41,7 +41,7 @@ export default function Home() {
       >
         {letters.map((letter, index) => (
           <motion.span
-            className={` font-cormorant font-normal lg:text-[50px] text-black uppercase text-center tracking-tighter `}
+            className={`font-cormorant font-normal lg:text-[50px] text-black uppercase text-center tracking-tighter `}
             key={index}
             variants={child}
           >
@@ -61,7 +61,7 @@ export default function Home() {
       >
         {letters.map((letter, index) => (
           <motion.span
-            className={` font-cormorant font-normal text-[28px] lg:text-[50px] text-black uppercase text-center tracking-tighter`}
+            className={`font-cormorant font-normal text-[28px] lg:text-[50px] text-black uppercase text-center tracking-tighter`}
             key={index}
             variants={child}
           >
