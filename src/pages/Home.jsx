@@ -16,7 +16,7 @@ import {
   container,
 } from "../motion/variants";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import Carousel from "../components/Carousel";
 
 export default function Home() {
   const photos1 = [BigPaint, Sevillana, Buda, ToreroMandala];
@@ -28,11 +28,10 @@ export default function Home() {
   const title = "Art Gallery Elena";
   const letters = title.split("");
 
-  const [mobileView, setMobileView] = useState('')
-
   return (
     <main className="lg:scroll">
-      <Header />
+    <div className="hidden md:block">
+    <Header />
       <HomeGallery photos={photos1} animationImages={animationLeftImages} border="border-b-2 border-black" />
       <motion.div
         className="h-[8vh] flex justify-center items-center "
@@ -51,6 +50,27 @@ export default function Home() {
         ))}
       </motion.div>
       <HomeGallery photos={photos2} animationImages={animationRightImages} border="border-t-2 border-black" />
+    </div>
+    <div className="block md:hidden">
+    <Header />
+    <motion.div
+        className="h-[8vh] flex justify-center items-center my-10"
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
+        {letters.map((letter, index) => (
+          <motion.span
+            className={` font-cormorant font-normal text-[28px] lg:text-[50px] text-black uppercase text-center tracking-tighter`}
+            key={index}
+            variants={child}
+          >
+            {letter + (index < letters.length - 1 ? "\u00A0" : "")}
+          </motion.span>
+        ))}
+      </motion.div>
+    <Carousel photos={photos3}/>
+    </div>
     </main>
   );
 }
