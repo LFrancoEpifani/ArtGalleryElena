@@ -26,21 +26,26 @@
     {
       "id": "4",
       "name": "Flamenco",
+      "description": "David with flowers",
       "price": "1100€",
       "size": "Acrylic. 120 x 80 cm",
-      "image": "/assets/Sevillana.jpg"
+      "image": "/assets/Sevillana.jpg",
+      "house": "/assets/HouseFlamenco.jpg"
     },
   
     {
       "id": "5",
-      "name": "Drop",
-      "price": "750€",
-      "size": "Acrylic. 40 x 50 cm",
-      "image": "/assets/drop.jpg"
+      "name": "Heaven on Earth",
+      "description": "Adan&Eva",
+      "price": "1700€",
+      "size": "Acrylic. 120 x 50 cm",
+      "image": "/assets/AdanEva.jpg",
+      "house": "/assets/HouseAdanEva.jpg"
     },
     {
       "id": "6",
       "name": "Hope",
+      "description": "David with flowers",
       "price": "750€",
       "size": "Acrylic. 40 x 50 cm",
       "image": "/assets/Hand.jpg"
@@ -48,6 +53,7 @@
     {
       "id": "7",
       "name": "Observer",
+      "description": "David with flowers",
       "price": "3600€",
       "size": "Mixed technique. 140 x 90 cm",
       "image": "/assets/David.jpg"

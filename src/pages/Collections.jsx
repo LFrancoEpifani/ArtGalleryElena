@@ -17,13 +17,13 @@ export default function Collections() {
   return (
     <>
       <Header />
-      <div className="font-cormorant px-[4vw]">
+      <div className="montserrat px-[4vw]">
         <div className="flex items-center justify-between my-10">
           <div className="">
             <h2 className="font-bold text-[30px]">Discover Timless Art</h2>
             <p className="text-[12px] text-[#747474]">By Art Gallery Elena</p>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center ">
             <button className="flex items-center border gap-1 border-black w-56 h-8 m-2 p-2 rounded-sm">
               Filter
               <Icon icon="fluent:filter-12-regular" />

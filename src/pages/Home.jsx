@@ -34,7 +34,7 @@ export default function Home() {
     <main className="lg:scroll overflow-hidden">
     <div className="hidden md:block">
     <Header />
-      <HomeGallery photos={photos1} animationImages={animationLeftImages} border="border-b-2 border-black" />
+      <HomeGallery photos={photos1} animationImages={animationLeftImages} border="border-y-2 border-black" />
       <motion.div
         className="h-[8vh] flex justify-center items-center "
         variants={container}
