@@ -10,7 +10,7 @@
     {
       "id": "2",
       "name": "Drop",
-      "description": "David with flowers",
+      "description": "Open it",
       "price": "750€",
       "size": "Acrylic. 40 x 50 cm",
       "image": "/assets/drop.jpg"
@@ -18,7 +18,7 @@
     {
       "id": "3",
       "name": "Hope",
-      "description": "David with flowers",
+      "description": "Esperanza",
       "price": "750€",
       "size": "Acrylic. 40 x 50 cm",
       "image": "/assets/Hand.jpg"
@@ -26,7 +26,7 @@
     {
       "id": "4",
       "name": "Flamenco",
-      "description": "David with flowers",
+      "description": "Wine and fan",
       "price": "1100€",
       "size": "Acrylic. 120 x 80 cm",
       "image": "/assets/Sevillana.jpg",
@@ -60,43 +60,43 @@
     },
     {
       "id": "8",
-      "name": "Flamenco",
-      "description": "David with flowers",
-      "price": "1100€",
+      "name": "Torero",
+      "description": "The kiss of the bull",
+      "price": "1400€",
       "size": "Acrylic. 120 x 80 cm",
-      "image": "/assets/Sevillana.jpg"
+      "image": "/assets/Torero.jpg"
     },
     {
       "id": "9",
-      "name": "Flamenco",
-      "description": "David with flowers",
+      "name": "Philosofer",
+      "description": "Flask",
       "price": "1100€",
       "size": "Acrylic. 120 x 80 cm",
-      "image": "/assets/Sevillana.jpg"
+      "image": "/assets/HombreSentado.jpg"
     },
     {
       "id": "10",
-      "name": "Flamenco",
-      "description": "David with flowers",
-      "price": "1100€",
-      "size": "Acrylic. 120 x 80 cm",
-      "image": "/assets/Sevillana.jpg"
+      "name": "Two Worlds",
+      "description": "Forgiveness of the goddess",
+      "price": "Disappear",
+      "size": "Acrylic. 220 x 200 cm",
+      "image": "/assets/BigPaint.png"
     },
     {
       "id": "11",
-      "name": "Flamenco",
-      "description": "David with flowers",
+      "name": "Sacrament",
+      "description": "The sacred drop",
       "price": "1100€",
       "size": "Acrylic. 120 x 80 cm",
-      "image": "/assets/Sevillana.jpg"
+      "image": "/assets/Llanto.jpg"
     },
     {
       "id": "12",
-      "name": "Flamenco",
-      "description": "David with flowers",
+      "name": "Evil bullfighter",
+      "description": "Mandalero",
       "price": "1100€",
       "size": "Acrylic. 120 x 80 cm",
-      "image": "/assets/Sevillana.jpg"
+      "image": "/assets/ToreroMandala.jpg"
     }
    
   ]

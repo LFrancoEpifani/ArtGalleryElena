@@ -1,11 +1,12 @@
 import { Icon } from "@iconify/react";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "/assets/FirmaElena.jpg";
 import LogoElena from '/assets/LogoElenaNew.jpg'
 import Burger from '../components/Burger';
 import { useState } from "react";
 
+
 export default function Header() {
+
 
   const location = useLocation();
   const currentPath = location.pathname;
@@ -48,11 +49,11 @@ export default function Header() {
           </Link>
         </ul>
         <div className="flex justify-center items-center">
-          <div className="flex justify-center items-center w-20 lg:w-24">
-          <button className="flex items-start font-bold text-xs mr-1">
-            <p>EN</p>
-            <Icon icon="ep:arrow-down-bold" />
-          </button>
+          <div className="flex justify-center items-center gap-2 w-20 lg:w-24">
+         <p className="flex text-sm gap-1">
+          EN
+          <Icon icon="ep:arrow-down-bold" />
+         </p>
           <button className="text-xl relative">
             <Icon className="text-2xl" icon="fluent:shopping-bag-24-regular" />
             <div className="absolute top-4 right-3 bg-black rounded-full w-3 h-3 flex items-center justify-center">

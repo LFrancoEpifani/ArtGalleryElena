@@ -17,7 +17,7 @@ export default function Collections() {
   return (
     <>
       <Header />
-      <div className="montserrat px-[4vw]">
+      <div className="montserrat px-[8vw]">
         <div className="lg:flex lg:items-center justify-between my-10">
           <div className="text-center lg:text-start">
             <h2 className="font-bold text-[30px]">Discover Timless Art</h2>
