@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import Artwork from "../components/ArtWork";
 import artworksData from "../data/artworks.json";
 import { useState, useEffect } from "react";
-import Masonry from "masonry-layout";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 export default function Collections() {
   const [artworks, setArtworks] = useState([]);
@@ -12,19 +12,11 @@ export default function Collections() {
 
   useEffect(() => {
     setArtworks(artworksData);
-  },[])
-
-  useEffect(() => {
-    new Masonry(gridRef.current, {
-      itemSelector: ".grid-item",
-      gutter: 0,
-    });
-  }, [artworks]);
+  }, []);
 
   return (
     <>
-    
-    <Header />
+      <Header />
       <div className="font-cormorant px-[4vw]">
         <div className="flex items-center justify-between my-10">
           <div className="">
@@ -42,13 +34,14 @@ export default function Collections() {
             </button>
           </div>
         </div>
-        <div ref={gridRef} className="">
-          {artworks.map((artwork) => (
-            <Artwork key={artwork.id} {...artwork} />
-          ))}
-        </div>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 550: 2, 900: 4 }}>
+          <Masonry>
+            {artworks.map((artwork) => (
+              <Artwork key={artwork.id} {...artwork} />
+            ))}
+          </Masonry>
+        </ResponsiveMasonry>
       </div>
     </>
   );
-    
 }

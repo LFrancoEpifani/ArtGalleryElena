@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 export default function ArtWork({ name, price, size, image, id }) {
 
   return (
-    // <Link to={`/art/${id}`}>
-      <div className="grid-item w-full md:w-1/2 lg:w-1/4 p-3 montserrat">
+    <Link to={`/art/${id}`}>
+      <div className=" w-full p-2 montserrat">
         <img
           src={image}
           alt={name}
@@ -17,6 +17,6 @@ export default function ArtWork({ name, price, size, image, id }) {
           <p className="text-md font-semibold">{price}</p>
         </div>
       </div>
-    // </Link>
+    </Link>
   );
 }
