@@ -23,7 +23,7 @@ export default function Collections() {
             <h2 className="font-bold text-[30px]">Discover Timless Art</h2>
             <p className="text-[15px] text-[#747474]">By Art Gallery Elena</p>
           </div>
-          <div className="flex items-start justify-start gap-3 my-8">
+          <div className="flex items-start justify-center gap-3 my-8">
             <button className="flex items-center border gap-1 py-1 px-6 rounded-full border-black lg:w-56 lg:h-8 lg:m-2 lg:p-2">
               Filter
               <Icon icon="fluent:filter-12-regular" />
@@ -34,7 +34,7 @@ export default function Collections() {
             </button>
           </div>
         </div>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 550: 2, 900: 4 }}>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 900: 4 }}>
           <Masonry>
             {artworks.map((artwork) => (
               <Artwork key={artwork.id} {...artwork} />

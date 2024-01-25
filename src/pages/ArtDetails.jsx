@@ -45,6 +45,13 @@ export default function ArtDetails() {
     return <div className='text-3xl'>Loading...</div>
   }
 
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
   return (
 
       <div className='montserrat'>
@@ -89,19 +96,22 @@ export default function ArtDetails() {
     </div>
     <div className='px-[12vw] my-12'>
         <h2 className='font-bold text-2xl my-8'>More ArtWorks</h2>
-        <div className='grid grid-cols-2 gap-2 items-start justify-start lg:grid-cols-4 lg:justify-center lg:items-center'>
-          {randomArts.map((randomArt) => (
-            <div key={randomArt.id}>
-              <img className='object-contain w-35 lg:w-50 shadow-xl' src={randomArt.image} alt={randomArt.name} />
-              <div className="text-start mb-4 lg:my-2">
-                <h2 className="text-lg font-semibold">{randomArt.name}</h2>
-                <p className="text-[12px] italic text-gray-500">{randomArt.description}</p>
-                <p className="text-xs text-gray-800 font-medium">{randomArt.size}</p>
-                <p className="text-sm font-semibold my-2">{randomArt.price}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+          <div className='grid grid-cols-2 gap-2 items-start justify-start lg:grid-cols-4 lg:justify-center lg:items-center'>
+            {randomArts.map((randomArt) => (
+              <Link key={randomArt.id} to={`/art/${randomArt.id}`} onClick={goToTop}>
+                <div key={randomArt.id}>
+                  <img className='object-contain w-35 lg:w-50 shadow-xl' src={randomArt.image} alt={randomArt.name} />
+                  <div className="text-start mb-4 lg:my-2">
+                    <h2 className="text-lg font-semibold">{randomArt.name}</h2>
+                    <p className="text-[12px] italic text-gray-500">{randomArt.description}</p>
+                    <p className="text-xs text-gray-800 font-medium">{randomArt.size}</p>
+                    <p className="text-sm font-semibold my-2">{randomArt.price}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+    
       </div>
     </div>
   )
