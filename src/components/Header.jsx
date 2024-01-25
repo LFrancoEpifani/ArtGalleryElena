@@ -16,7 +16,7 @@ export default function Header() {
         <Link to={"/"}>
           <div className="flex justify-center items-center">
             <img className="w-11 h-full object-contain" src={LogoElena} alt="" />
-            <p className="font-bold">Art Gallery Elena</p>
+            <p className="font-bold font-cormorant">ELENA</p>
           </div>
         </Link>
         <ul className="hidden md:flex items-center justify-center gap-8 font-semibold text-[14px] mr-20">
