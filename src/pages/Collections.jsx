@@ -12,7 +12,9 @@ export default function Collections() {
 
   useEffect(() => {
     setArtworks(artworksData);
+  },[])
 
+  useEffect(() => {
     new Masonry(gridRef.current, {
       itemSelector: ".grid-item",
       gutter: 0,
