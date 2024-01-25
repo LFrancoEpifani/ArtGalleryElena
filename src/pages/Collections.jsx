@@ -20,15 +20,15 @@ export default function Collections() {
       <div className="montserrat px-[4vw]">
         <div className="lg:flex lg:items-center justify-between my-10">
           <div className="text-center lg:text-start">
-            <h2 className="font-bold text-[25px] lg:text-[30px]">Discover Timless Art</h2>
-            <p className="text-[12px] text-[#747474]">By Art Gallery Elena</p>
+            <h2 className="font-bold text-[30px]">Discover Timless Art</h2>
+            <p className="text-[15px] text-[#747474]">By Art Gallery Elena</p>
           </div>
-          <div className="flex items-start justify-end gap-3 mt-4">
-            <button className="flex items-center lg:border gap-1 lg:border-black lg:w-56 lg:h-8 lg:m-2 lg:p-2 lg:rounded-sm">
+          <div className="flex items-start justify-start gap-3 my-8">
+            <button className="flex items-center border gap-1 py-1 px-6 rounded-full border-black lg:w-56 lg:h-8 lg:m-2 lg:p-2">
               Filter
               <Icon icon="fluent:filter-12-regular" />
             </button>
-            <button className="flex items-center lg:border gap-1 lg:border-black lg:w-56 lg:h-8 lg:m-2 lg:p-2 lg:rounded-sm">
+            <button className="flex items-center border gap-1 py-1 px-7 rounded-full border-black lg:w-56 lg:h-8 lg:m-2 lg:p-2">
               Sort
               <Icon icon="lucide:arrow-up-down" />
             </button>

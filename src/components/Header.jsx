@@ -19,7 +19,7 @@ export default function Header() {
             <p className="font-bold font-cormorant">ELENA</p>
           </div>
         </Link>
-        <ul className="hidden md:flex items-center justify-center gap-8 font-semibold text-[14px] mr-20">
+        <ul className="hidden md:flex items-center justify-center gap-8 font-semibold text-[14px]">
           <Link
             className={`${currentPath == "/" ? "bottom-rounded" : ""}`}
             to={"/"}
