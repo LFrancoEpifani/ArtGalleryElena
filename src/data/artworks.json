@@ -7,21 +7,42 @@
       "image": "./src/assets/David.jpg"
     },
     {
-      "id": "1",
+      "id": "2",
       "name": "Drop",
       "price": "750€",
       "size": "Acrylic. 40 x 50 cm",
       "image": "./src/assets/drop.jpg"
     },
     {
-      "id": "1",
+      "id": "3",
       "name": "Hope",
       "price": "750€",
       "size": "Acrylic. 40 x 50 cm",
       "image": "./src/assets/hand.jpg"
     },
     {
-      "id": "1",
+      "id": "4",
+      "name": "Flamenco",
+      "price": "1100€",
+      "size": "Acrylic. 120 x 80 cm",
+      "image": "./src/assets/sevillana.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Flamenco",
+      "price": "1100€",
+      "size": "Acrylic. 120 x 80 cm",
+      "image": "./src/assets/sevillana.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Flamenco",
+      "price": "1100€",
+      "size": "Acrylic. 120 x 80 cm",
+      "image": "./src/assets/sevillana.jpg"
+    },
+    {
+      "id": "7",
       "name": "Flamenco",
       "price": "1100€",
       "size": "Acrylic. 120 x 80 cm",
