@@ -31,7 +31,7 @@ export default function Home() {
   const letters = title.split("");
 
   return (
-    <main className="lg:scroll">
+    <main className="lg:scroll overflow-hidden">
     <div className="hidden md:block">
     <Header />
       <HomeGallery photos={photos1} animationImages={animationLeftImages} border="border-b-2 border-black" />
