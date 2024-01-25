@@ -56,7 +56,7 @@ export default function ArtDetails() {
         </p>
         </Link>
       <div className='lg:flex p-10 justify-evenly items-center'>
-      <div className='flex flex-col gap-4 lg:gap-8 items-center'>
+      <div className='flex flex-col lg:flex-row gap-4 lg:gap-8 items-center'>
         <div className='bg-black'>
           <img className='object-contain w-90 shadow-xl border border-black' src={selectedImage} alt="" />
         </div>

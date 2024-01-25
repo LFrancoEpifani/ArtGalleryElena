@@ -44,19 +44,19 @@
     },
     {
       "id": "6",
-      "name": "Hope",
-      "description": "David with flowers",
-      "price": "750€",
+      "name": "Couple",
+      "description": "Blue eyes horses",
+      "price": "550€",
       "size": "Acrylic. 40 x 50 cm",
-      "image": "/assets/Hand.jpg"
+      "image": "/assets/Horse.jpg"
     },
     {
       "id": "7",
-      "name": "Observer",
-      "description": "David with flowers",
-      "price": "3600€",
-      "size": "Mixed technique. 140 x 90 cm",
-      "image": "/assets/David.jpg"
+      "name": "Lakshmi Goddess",
+      "description": "Buda in peace",
+      "price": "20400€",
+      "size": "Mixed technique. 60 x 80 cm",
+      "image": "/assets/Buda.jpg"
     },
     {
       "id": "8",
