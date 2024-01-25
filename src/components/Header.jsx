@@ -12,14 +12,19 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="montserrat h-[8vh] flex justify-between items-center text-black px-1 border-2 border-y-black">
-        <img className="w-22 lg:w-28 h-full object-contain" src={Logo} alt="" />
-        <ul className="hidden md:flex items-center justify-center gap-8 font-semibold text-[14px] ">
+      <nav className="montserrat h-[8vh] flex justify-between items-center text-black px-1 border-y border-gray-400">
+        <Link to={"/"}>
+          <div className="flex justify-center items-center">
+            <img className="w-11 h-full object-contain" src={LogoElena} alt="" />
+            <p className="font-bold font-cormorant">ELENA</p>
+          </div>
+        </Link>
+        <ul className="hidden md:flex items-center justify-center gap-8 font-semibold text-[14px] mr-20">
           <Link
             className={`${currentPath == "/" ? "bottom-rounded" : ""}`}
             to={"/"}
           >
-            <li className="text-black">HOME</li>
+            <li className="text-black">Home</li>
           </Link>
           <Link
             className={`${
@@ -27,19 +32,19 @@ export default function Header() {
             }`}
             to={"/collections"}
           >
-            <li className="text-black">COLLECTIONS</li>
+            <li className="text-black">Collections</li>
           </Link>
           <Link
             className={`${currentPath == "/about" ? "bottom-rounded" : ""}`}
             to={"/about"}
           >
-            <li className="text-black">ABOUT ME</li>
+            <li className="text-black">About Me</li>
           </Link>
           <Link
             className={`${currentPath == "/galleries" ? "bottom-rounded" : ""}`}
             to={"/galleries"}
           >
-            <li className="text-black">GALLERIES</li>
+            <li className="text-black">Galleries</li>
           </Link>
         </ul>
         <div className="flex justify-center items-center">

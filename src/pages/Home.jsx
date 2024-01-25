@@ -43,7 +43,7 @@ export default function Home() {
       >
         {letters.map((letter, index) => (
           <motion.span
-            className={`font-cormorant font-normal lg:text-[50px] text-black uppercase text-center tracking-tighter `}
+            className={`font-cormorant font-normal text-[42px] text-black uppercase text-center tracking-tighter `}
             key={index}
             variants={child}
           >
@@ -63,7 +63,7 @@ export default function Home() {
       >
         {letters.map((letter, index) => (
           <motion.span
-            className={`font-cormorant font-normal text-[28px] lg:text-[50px] text-black uppercase text-center tracking-tighter`}
+            className={`font-cormorant font-normal text-[28px]  text-black uppercase text-center tracking-tighter`}
             key={index}
             variants={child}
           >
@@ -73,8 +73,8 @@ export default function Home() {
       </motion.div>
     <Carousel photos={photos3}/>
    <div className="flex justify-center items-center my-12">
-      <Link to={"/collection"}>
-      <button className="bg-white text-black border border-black w-44 h-12 rounded-md font-cormorant font-semibold uppercase">
+      <Link to={"/collections"}>
+      <button className="bg-white text-black border border-black w-44 h-12 rounded-md font-cormorant font-semibold uppercase shadow-md">
         Collections
       </button>
       </Link>

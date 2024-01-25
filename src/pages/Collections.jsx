@@ -21,7 +21,8 @@ export default function Collections() {
 
   return (
     <>
-      <Header />
+    
+    <Header />
       <div className="montserrat px-[4vw]">
         <div className="flex items-center justify-between my-10">
           <div className="">
@@ -47,4 +48,5 @@ export default function Collections() {
       </div>
     </>
   );
+    
 }
