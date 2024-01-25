@@ -23,7 +23,7 @@ export default function Collections() {
     <>
     
     <Header />
-      <div className="montserrat px-[4vw]">
+      <div className="font-cormorant px-[4vw]">
         <div className="flex items-center justify-between my-10">
           <div className="">
             <h2 className="font-bold text-[30px]">Discover Timless Art</h2>
