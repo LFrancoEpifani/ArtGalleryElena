@@ -5,7 +5,7 @@
       "description": "David with flowers",
       "price": "3600€",
       "size": "Mixed technique. 140 x 90 cm",
-      "image": "../../src/assets/David.jpg"
+      "image": "../src/assets/David.jpg"
     },
     {
       "id": "2",
@@ -13,7 +13,7 @@
       "description": "David with flowers",
       "price": "750€",
       "size": "Acrylic. 40 x 50 cm",
-      "image": "../../src/assets/drop.jpg"
+      "image": "../src/assets/drop.jpg"
     },
     {
       "id": "3",
@@ -21,14 +21,14 @@
       "description": "David with flowers",
       "price": "750€",
       "size": "Acrylic. 40 x 50 cm",
-      "image": "../../src/assets/hand.jpg"
+      "image": "../src/assets/hand.jpg"
     },
     {
       "id": "4",
       "name": "Flamenco",
       "price": "1100€",
       "size": "Acrylic. 120 x 80 cm",
-      "image": "../../src/assets/sevillana.jpg"
+      "image": "../src/assets/sevillana.jpg"
     },
   
     {
@@ -36,21 +36,21 @@
       "name": "Drop",
       "price": "750€",
       "size": "Acrylic. 40 x 50 cm",
-      "image": "../../src/assets/drop.jpg"
+      "image": "../src/assets/drop.jpg"
     },
     {
       "id": "6",
       "name": "Hope",
       "price": "750€",
       "size": "Acrylic. 40 x 50 cm",
-      "image": "../../src/assets/hand.jpg"
+      "image": "../src/assets/hand.jpg"
     },
     {
       "id": "7",
       "name": "Observer",
       "price": "3600€",
       "size": "Mixed technique. 140 x 90 cm",
-      "image": "../../src/assets/David.jpg"
+      "image": "../src/assets/David.jpg"
     },
     {
       "id": "8",
@@ -58,7 +58,7 @@
       "description": "David with flowers",
       "price": "1100€",
       "size": "Acrylic. 120 x 80 cm",
-      "image": "../../src/assets/sevillana.jpg"
+      "image": "../src/assets/sevillana.jpg"
     },
     {
       "id": "9",
@@ -66,7 +66,7 @@
       "description": "David with flowers",
       "price": "1100€",
       "size": "Acrylic. 120 x 80 cm",
-      "image": "../../src/assets/sevillana.jpg"
+      "image": "../src/assets/sevillana.jpg"
     },
     {
       "id": "10",
@@ -74,7 +74,7 @@
       "description": "David with flowers",
       "price": "1100€",
       "size": "Acrylic. 120 x 80 cm",
-      "image": "../../src/assets/sevillana.jpg"
+      "image": "../src/assets/sevillana.jpg"
     },
     {
       "id": "11",
@@ -82,7 +82,7 @@
       "description": "David with flowers",
       "price": "1100€",
       "size": "Acrylic. 120 x 80 cm",
-      "image": "../../src/assets/sevillana.jpg"
+      "image": "../src/assets/sevillana.jpg"
     },
     {
       "id": "12",
@@ -90,7 +90,7 @@
       "description": "David with flowers",
       "price": "1100€",
       "size": "Acrylic. 120 x 80 cm",
-      "image": "../../src/assets/sevillana.jpg"
+      "image": "../src/assets/sevillana.jpg"
     }
    
   ]
