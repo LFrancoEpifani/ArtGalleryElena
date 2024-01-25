@@ -8,7 +8,7 @@ export default function ArtWork({ name, price, size, image, id }) {
         <img
           src={image}
           alt={name}
-          className="object-contain w-full h-full "
+          className="object-contain w-full h-full rounded-sm"
         />
         <div className="text-center">
           <h2 className="text-lg font-normal my-2">{name}</h2>
