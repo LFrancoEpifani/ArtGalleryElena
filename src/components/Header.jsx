@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../assets/FirmaElena.jpg";
-import LogoElena from '../assets/LogoElenaNew.jpg'
+import Logo from "/assets/FirmaElena.jpg";
+import LogoElena from '/assets/LogoElenaNew.jpg'
 import Burger from '../components/Burger';
 import { useState } from "react";
 

@@ -1,12 +1,12 @@
 import HomeGallery from "../components/HomeGallery";
-import Buda from "../assets/Buda.jpg";
-import Horse from "../assets/Horse.jpg";
-import Elena from "../assets/Elena.jpg";
-import Sevillana from "../assets/Sevillana.jpg";
-import Llanto from "../assets/Llanto.jpg";
-import HombreSentado from "../assets/HombreSentado.jpg";
-import ToreroMandala from "../assets/ToreroMandala.jpg";
-import BigPaint from "../assets/BigPaint.png";
+import Buda from "/assets/Buda.jpg";
+import Horse from "/assets/Horse.jpg";
+import Elena from "/assets/Elena.jpg";
+import Sevillana from "/assets/Sevillana.jpg";
+import Llanto from "/assets/Llanto.jpg";
+import HombreSentado from "/assets/HombreSentado.jpg";
+import ToreroMandala from "/assets/ToreroMandala.jpg";
+import BigPaint from "/assets/BigPaint.png";
 
 import Header from "../components/Header";
 import {

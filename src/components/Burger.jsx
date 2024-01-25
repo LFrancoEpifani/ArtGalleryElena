@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import { Icon } from '@iconify/react';
-import Logo from '../assets/LogoElenaNew.jpg'
-import PaintIcon from '../assets/CollectionIcon.png'
-import GalleryIcon from '../assets/GalleryIcon.jpg'
-import AboutmeIcon from '../assets/AboutMeIcon.jpg'
+import Logo from '/assets/LogoElenaNew.jpg'
+import PaintIcon from '/assets/CollectionIcon.png'
+import GalleryIcon from '/assets/GalleryIcon.jpg'
+import AboutmeIcon from '/assets/AboutMeIcon.jpg'
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Burger() {
