@@ -73,7 +73,7 @@ export default function Home() {
       </motion.div>
     <Carousel photos={photos3}/>
    <div className="flex justify-center items-center my-12">
-      <Link to={"/collection"}>
+      <Link to={"/collections"}>
       <button className="bg-white text-black border border-black w-44 h-12 rounded-md font-cormorant font-semibold uppercase shadow-md">
         Collections
       </button>
