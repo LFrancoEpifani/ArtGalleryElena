@@ -5,11 +5,11 @@ export default function ArtWork({ name, price, size, image, description, id }) {
 
   return (
     <Link to={`/art/${id}`}>
-      <div className="w-full p-3 montserrat">
+      <div className="w-full p-2 montserrat">
         <img
           src={image}
           alt={name}
-          className="object-contain w-[40vh] rounded-sm shadow-gray-500 shadow-md hover:scale-105 transition-transform duration-300"
+          className="object-contain w-[40vh] rounded-sm hover:scale-105 transition-transform duration-300"
         />
         <div className="text-start my-2">
           <div className="">
