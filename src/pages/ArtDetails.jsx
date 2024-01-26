@@ -26,6 +26,7 @@ export default function ArtDetails() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() =>{
+    
     const selectedArt = artworks.find((item) => item.id.toString() === artId);
     setArt(selectedArt)
 
@@ -70,6 +71,7 @@ export default function ArtDetails() {
         <div className='flex lg:flex-col items-start gap-3'>
           <img className='h-12 w-12 object-cover cursor-pointer' src={art.image} alt="" onClick={() => handleImageClick(art.image)}  />
           <img className='h-12 w-12 object-cover cursor-pointer' src={art.house} alt="" onClick={() => handleImageClick(art.house)}  />
+          <img className='h-12 w-12 object-cover cursor-pointer' src={art.room} alt="" onClick={() => handleImageClick(art.room)}  />
         </div>
       </div>
        <div className='my-4'>

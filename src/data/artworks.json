@@ -5,7 +5,8 @@
       "description": "David with flowers",
       "price": "950€",
       "size": "Oil on canvas - Acrylic. 60x70cm",
-      "image": "/assets/Gate.jpg"
+      "image": "/assets/Gate.jpg",
+      "room": "/assets/RoomGate.jpg"
     },
     {
       "id": "2",
@@ -13,7 +14,8 @@
       "description": "Open it",
       "price": "750€",
       "size": "Oil on canvas - Acrylic. 40x50cm",
-      "image": "/assets/drop.jpg"
+      "image": "/assets/drop.jpg",
+      "room": "/assets/RoomDrop.jpg"
     },
     {
       "id": "3",
@@ -21,7 +23,8 @@
       "description": "Esperanza",
       "price": "750€",
       "size": "Oil on canvas - Acrylic. 40x50cm",
-      "image": "/assets/Hand.jpg"
+      "image": "/assets/Hand.jpg",
+      "room": "/assets/RoomHope.jpg"
     },
     {
       "id": "4",
@@ -30,7 +33,8 @@
       "price": "1100€",
       "size": "Oil on canvas - Mixed technique. 120x80cm",
       "image": "/assets/Sevillana.jpg",
-      "house": "/assets/HouseFlamenco.jpg"
+      "house": "/assets/HouseFlamenco.jpg",
+      "room": "/assets/RoomFlamenco.jpg"
     },
   
     {
@@ -40,7 +44,8 @@
       "price": "1700€",
       "size": "Oil on canvas - Mixed technique. 60x80cm ",
       "image": "/assets/AdanEva.jpg",
-      "house": "/assets/HouseAdanEva.jpg"
+      "house": "/assets/HouseAdanEva.jpg",
+      "room": "/assets/RoomAdanEva.jpg"
     },
     {
       "id": "6",
@@ -48,7 +53,8 @@
       "description": "Blue eyes horses",
       "price": "550€",
       "size": "Acrylic. 40 x 50 cm",
-      "image": "/assets/Horse.jpg"
+      "image": "/assets/Horse.jpg",
+      "room": "/assets/RoomHorse.jpg"
     },
     {
       "id": "7",
@@ -56,7 +62,8 @@
       "description": "David with flowers",
       "price": "3600€",
       "size": "Oil on canvas - Mixed technique. 140x90cm",
-      "image": "/assets/David.jpg"
+      "image": "/assets/David.jpg",
+      "room": "/assets/RoomDavid.jpg"
     },
     {
       "id": "8",
@@ -64,7 +71,8 @@
       "description": "Mixing Cultures",
       "price": "5000€",
       "size": "Oil on canvas - Mixed technique. 140x115cm",
-      "image": "/assets/Culture.jpg"
+      "image": "/assets/Culture.jpg",
+      "room": "/assets/RoomCulture.jpg"
     },
     {
       "id": "9",
@@ -72,31 +80,44 @@
       "description": "Disturbance people",
       "price": "2000€",
       "size": "Oil on canvas - Mixed technique. 178x76cm",
-      "image": "/assets/Disturbed.jpg"
+      "image": "/assets/Disturbed.jpg",
+      "room": "/assets/RoomDisturbed.jpg"
     },
     {
-      "id": "12",
+      "id": "10",
       "name": "Deep",
       "description": "Deep reflex",
       "price": "2200€",
       "size": "Oil on canvas - Mixed technique. 178x76cm",
-      "image": "/assets/Deep.jpg"
+      "image": "/assets/Deep.jpg",
+      "room": "/assets/RoomDeep.jpg"
     },
     {
-      "id": "12",
+      "id": "11",
       "name": "Moment",
       "description": "Just one moment",
       "price": "1200€",
       "size": "Oil on canvas - Acrylic 120x80cm",
-      "image": "/assets/Moment.jpg"
+      "image": "/assets/Moment.jpg",
+      "room": "/assets/RoomMoment.jpg"
     },
     {
-      "id": "13",
+      "id": "12",
       "name": "Depression",
       "description": "Depressive patriotism",
       "price": "2500€",
       "size": "Oil on canvas - Mixed technique  178x76cm",
-      "image": "/assets/Depression.jpg"
+      "image": "/assets/Depression.jpg",
+      "room": "/assets/RoomDepression.jpg"
+    },
+    {
+      "id": "13",
+      "name": "One million quartet",
+      "description": "The cool musicians",
+      "price": "2500€",
+      "size": "Oil on canvas - Mixed technique  178x76cm",
+      "image": "/assets/Cool.jpg",
+      "room": "/assets/RoomCool.jpg"
     }
    
   ]
