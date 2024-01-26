@@ -17,7 +17,7 @@ export default function Collections() {
   return (
     <>
       <Header />
-      <div className="montserrat px-[8vw]">
+      <div className="montserrat px-[8vw] 2xl:px-[12vw]">
         <div className="lg:flex lg:items-center justify-between my-10">
           <div className="text-start lg:text-start">
             <h2 className="font-bold text-[28px] lg:text-[30px]">Discover Timless Art</h2>
@@ -27,11 +27,11 @@ export default function Collections() {
           Here you will find an extensive collection of paintings, each with its own unique style and technique. Each painting is a window into a different world, offering a variety of visual experiences for all tastes and preferences.No matter if you are an amateur artist or a professional artist, we invite you to explore our gallery and discover the works that resonate with you.
           </p>
           <div className="flex items-start justify-start gap-3 mt-8 mb-4">
-            <button className="flex items-center gap-1  lg:border  lg:border-black lg:w-56 lg:h-8 lg:m-2 lg:p-2">
+            <button className="flex items-center gap-1  lg:border  lg:border-black lg:w-56 lg:h-8 lg:m-2 lg:p-2 rounded-full">
               Filter
               <Icon icon="fluent:filter-12-regular" />
             </button>
-            <button className="flex items-center gap-1  lg:border lg:border-black lg:w-56 lg:h-8 lg:m-2 lg:p-2">
+            <button className="flex items-center gap-1  lg:border lg:border-black lg:w-56 lg:h-8 lg:m-2 lg:p-2 rounded-full">
               Sort
               <Icon icon="lucide:arrow-up-down" />
             </button>

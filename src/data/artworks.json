@@ -1,18 +1,18 @@
 [
     {
       "id": "1",
-      "name": "Observer",
+      "name": "Gate",
       "description": "David with flowers",
-      "price": "3600€",
-      "size": "Mixed technique. 140 x 90 cm",
-      "image": "/assets/David.jpg"
+      "price": "950€",
+      "size": "Oil on canvas - Acrylic. 60x70cm",
+      "image": "/assets/Gate.jpg"
     },
     {
       "id": "2",
       "name": "Drop",
       "description": "Open it",
       "price": "750€",
-      "size": "Acrylic. 40 x 50 cm",
+      "size": "Oil on canvas - Acrylic. 40x50cm",
       "image": "/assets/drop.jpg"
     },
     {
@@ -20,7 +20,7 @@
       "name": "Hope",
       "description": "Esperanza",
       "price": "750€",
-      "size": "Acrylic. 40 x 50 cm",
+      "size": "Oil on canvas - Acrylic. 40x50cm",
       "image": "/assets/Hand.jpg"
     },
     {
@@ -28,7 +28,7 @@
       "name": "Flamenco",
       "description": "Wine and fan",
       "price": "1100€",
-      "size": "Acrylic. 120 x 80 cm",
+      "size": "Oil on canvas - Mixed technique. 120x80cm",
       "image": "/assets/Sevillana.jpg",
       "house": "/assets/HouseFlamenco.jpg"
     },
@@ -38,7 +38,7 @@
       "name": "Heaven on Earth",
       "description": "Adan&Eva",
       "price": "1700€",
-      "size": "Acrylic. 120 x 50 cm",
+      "size": "Oil on canvas - Mixed technique. 60x80cm ",
       "image": "/assets/AdanEva.jpg",
       "house": "/assets/HouseAdanEva.jpg"
     },
@@ -52,51 +52,51 @@
     },
     {
       "id": "7",
-      "name": "Lakshmi Goddess",
-      "description": "Buda in peace",
-      "price": "2400€",
-      "size": "Mixed technique. 60 x 80 cm",
-      "image": "/assets/Buda.jpg"
+      "name": "Observer",
+      "description": "David with flowers",
+      "price": "3600€",
+      "size": "Oil on canvas - Mixed technique. 140x90cm",
+      "image": "/assets/David.jpg"
     },
     {
       "id": "8",
-      "name": "Torero",
-      "description": "The kiss of the bull",
-      "price": "1400€",
-      "size": "Acrylic. 120 x 80 cm",
-      "image": "/assets/Torero.jpg"
+      "name": "Cultures",
+      "description": "Mixing Cultures",
+      "price": "5000€",
+      "size": "Oil on canvas - Mixed technique. 140x115cm",
+      "image": "/assets/Culture.jpg"
     },
     {
       "id": "9",
-      "name": "Philosofer",
-      "description": "Flask",
-      "price": "800€",
-      "size": "Acrylic. 120 x 80 cm",
-      "image": "/assets/HombreSentado.jpg"
-    },
-    {
-      "id": "10",
-      "name": "Two Worlds",
-      "description": "Forgiveness of the goddess",
-      "price": "Disappear",
-      "size": "Acrylic. 220 x 200 cm",
-      "image": "/assets/BigPaint.png"
-    },
-    {
-      "id": "11",
-      "name": "Sacrament",
-      "description": "The sacred drop",
-      "price": "1900€",
-      "size": "Acrylic. 120 x 80 cm",
-      "image": "/assets/Llanto.jpg"
+      "name": "Disturbed",
+      "description": "Disturbance people",
+      "price": "2000€",
+      "size": "Oil on canvas - Mixed technique. 178x76cm",
+      "image": "/assets/Disturbed.jpg"
     },
     {
       "id": "12",
-      "name": "Evil bullfighter",
-      "description": "Mandalero",
+      "name": "Deep",
+      "description": "Deep reflex",
+      "price": "2200€",
+      "size": "Oil on canvas - Mixed technique. 178x76cm",
+      "image": "/assets/Deep.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Moment",
+      "description": "Just one moment",
       "price": "1200€",
-      "size": "Acrylic. 120 x 80 cm",
-      "image": "/assets/ToreroMandala.jpg"
+      "size": "Oil on canvas - Acrylic 120x80cm",
+      "image": "/assets/Moment.jpg"
+    },
+    {
+      "id": "13",
+      "name": "Depression",
+      "description": "Depressive patriotism",
+      "price": "2500€",
+      "size": "Oil on canvas - Mixed technique  178x76cm",
+      "image": "/assets/Depression.jpg"
     }
    
   ]
