@@ -94,7 +94,7 @@ export default function ArtDetails() {
         </div>
        </div>
     </div>
-    <div className='px-[18vw] my-12'>
+    <div className='px-[12vw] my-12'>
         <h2 className='font-bold text-2xl my-8'>More ArtWorks</h2>
           <div className='grid grid-cols-2 gap-2 items-start justify-start lg:grid-cols-4 lg:justify-center lg:items-center'>
             {randomArts.map((randomArt) => (

@@ -50,7 +50,7 @@ export default function Header() {
         </ul>
         <div className="flex justify-center items-center">
           <div className="flex justify-center items-center gap-2 w-20 lg:w-24">
-         <p className="flex text-sm gap-1">
+         <p className="flex text-sm gap-1 font-bold">
           EN
           <Icon icon="ep:arrow-down-bold" />
          </p>
