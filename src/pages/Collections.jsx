@@ -24,7 +24,7 @@ export default function Collections() {
             <p className="text-[15px] text-[#747474]">By Art Gallery Elena</p>
           </div>
           <p className="block md:hidden text-start my-6 leading-7">
-          Here you will find an extensive collection of paintings, each with its own unique style and technique. Each painting is a window into a different world, offering a variety of visual experiences for all tastes and preferences. Whether you are an art aficionado or an art connoisseur, we invite you to explore our gallery and discover the works that resonate with you.
+          Here you will find an extensive collection of paintings, each with its own unique style and technique. Each painting is a window into a different world, offering a variety of visual experiences for all tastes and preferences.No matter if you are an amateur artist or a professional artist, we invite you to explore our gallery and discover the works that resonate with you.
           </p>
           <div className="flex items-start justify-start gap-3 mt-8 mb-4">
             <button className="flex items-center gap-1  lg:border  lg:border-black lg:w-56 lg:h-8 lg:m-2 lg:p-2">
