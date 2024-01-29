@@ -37,7 +37,7 @@ export default function Home() {
     <main className="lg:scroll overflow-hidden">
     <div className="hidden md:block">
     <Header />
-      <HomeGallery photos={photos1} animationImages={animationLeftImages} border="border-b-2 border-black" />
+      <HomeGallery photos={photos1} animationImages={animationLeftImages} border="border-y-2 border-black" />
       <motion.div
         className="h-[8vh] flex justify-center items-center "
         variants={container}
@@ -56,7 +56,7 @@ export default function Home() {
       </motion.div>
       <HomeGallery photos={photos2} animationImages={animationRightImages} border="border-t-2 border-black" />
     </div>
-    <div className="block md:hidden">
+    <div className="block md:hidden -z-50">
     <Header />
     <motion.div
         className="h-[8vh] flex justify-center items-center my-8"
@@ -74,7 +74,7 @@ export default function Home() {
           </motion.span>
         ))}
       </motion.div>
-    <Carousel photos={photos3}/>
+      <Carousel photos={photos3}/>
    <div className="flex justify-center items-center my-12">
       <Link to={"/collections"}>
       <button className="bg-white text-black border border-black w-44 h-12 rounded-md font-cormorant font-semibold uppercase shadow-md">

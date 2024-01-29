@@ -1,25 +1,28 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 
-import enTranslation from './src/locales/en/common.json';
-import esTranslation from './src/locales/es/common.json';
+import enCommon from "./src/locales/en/common.json";
+import esCommon from "./src/locales/es/common.json";
 
-i18n
-  .use(initReactI18next)
-  .init({
-    resources: {
-      en: {
-        translation: enTranslation,
-      },
-      es: {
-        translation: esTranslation,
-      },
+import enCollections from "./src/locales/en/collections.json";
+import esCollections from "./src/locales/es/collections.json";
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en: {
+      common: enCommon,
+      collections: enCollections,
     },
-    fallbackLng: 'en', // Idioma predeterminado en caso de no coincidencia
-    debug: true, // Habilitar el modo de depuración
-    interpolation: {
-      escapeValue: false, // Evitar la escapada automática de HTML
+    es: {
+      common: esCommon,
+      collections: esCollections,
     },
-  });
+  },
+  fallbackLng: "en",
+  debug: true,
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
 export default i18n;

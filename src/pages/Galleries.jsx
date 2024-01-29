@@ -1,7 +1,10 @@
+import Header from "../components/Header"
 
 function Galleries() {
   return (
-    <div>Galleries</div>
+    <div>
+      <Header/>
+    </div>
   )
 }
 
