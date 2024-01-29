@@ -27,6 +27,7 @@ export default function Header() {
           >
             <li className="text-black">Home</li>
           </Link>
+
           <Link
             className={`${
               currentPath == "/collections" ? "bottom-rounded" : ""
@@ -35,19 +36,23 @@ export default function Header() {
           >
             <li className="text-black">Collections</li>
           </Link>
+
           <Link
             className={`${currentPath == "/about" ? "bottom-rounded" : ""}`}
             to={"/about"}
           >
             <li className="text-black">About Me</li>
           </Link>
+
           <Link
             className={`${currentPath == "/galleries" ? "bottom-rounded" : ""}`}
             to={"/galleries"}
           >
             <li className="text-black">Galleries</li>
           </Link>
+
         </ul>
+        
         <div className="flex justify-center items-center">
           <div className="flex justify-center items-center gap-2 w-20 lg:w-24">
          <p className="flex text-sm gap-1 font-bold 2xl:text-[18px]">
