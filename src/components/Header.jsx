@@ -1,19 +1,25 @@
 import { Icon } from "@iconify/react";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "/assets/FirmaElena.jpg";
 import LogoElena from '/assets/LogoElenaNew.jpg'
 import Burger from '../components/Burger';
-import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
 
   const location = useLocation();
   const currentPath = location.pathname;
 
+  const { t, i18n } = useTranslation();
+  
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
+
+
   return (
     <header>
       <nav className="montserrat h-[8vh] flex justify-between items-center text-black px-1 border-y border-gray-400">
-        <Link to={"/"}>
+        <Link  to={"/"}>
           <div className="flex justify-center items-center">
             <img className="w-11 h-full object-contain" src={LogoElena} alt="" />
             <p className="font-bold font-cormorant">ELENA</p>
@@ -24,7 +30,7 @@ export default function Header() {
             className={`${currentPath == "/" ? "bottom-rounded" : ""}`}
             to={"/"}
           >
-            <li className="text-black">Home</li>
+            <li className="text-black"><h1>{t('home')}</h1></li>
           </Link>
           <Link
             className={`${
@@ -32,24 +38,24 @@ export default function Header() {
             }`}
             to={"/collections"}
           >
-            <li className="text-black">Collections</li>
+            <li className="text-black">{t('collections')}</li>
           </Link>
           <Link
             className={`${currentPath == "/about" ? "bottom-rounded" : ""}`}
             to={"/about"}
           >
-            <li className="text-black">About Me</li>
+            <li className="text-black">{t('about')}</li>
           </Link>
           <Link
             className={`${currentPath == "/galleries" ? "bottom-rounded" : ""}`}
             to={"/galleries"}
           >
-            <li className="text-black">Galleries</li>
+            <li className="text-black">{t('galleries')}</li>
           </Link>
         </ul>
         <div className="flex justify-center items-center">
           <div className="flex justify-center items-center w-20 lg:w-24">
-          <button className="flex items-start font-bold text-xs mr-1">
+          <button onClick={() => changeLanguage("es")}  className="flex items-start font-bold text-xs mr-1">
             <p>EN</p>
             <Icon icon="ep:arrow-down-bold" />
           </button>
