@@ -1,0 +1,124 @@
+[
+    {
+      "id": "1",
+      "name": "Gate",
+      "description": "David con flores",
+      "price": "950€",
+      "size": "Óleo sobre lienzo - Acrílico. 60x70cm",
+      "image": "/assets/Gate.jpg",
+      "room": "/assets/RoomGate.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Drop",
+      "description": "Ábrelo",
+      "price": "750€",
+      "size": "Óleo sobre lienzo - Acrílico. 40x50cm",
+      "image": "/assets/drop.jpg",
+      "room": "/assets/RoomDrop.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Hope",
+      "description": "Esperanza",
+      "price": "750€",
+      "size": "Óleo sobre lienzo - Acrílico. 40x50cm",
+      "image": "/assets/Hand.jpg",
+      "room": "/assets/RoomHope.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Flamenco",
+      "description": "Vino y abanico",
+      "price": "1100€",
+      "size": "Óleo sobre lienzo - Técnica mixta. 120x80cm",
+      "image": "/assets/Sevillana.jpg",
+      "house": "/assets/HouseFlamenco.jpg",
+      "room": "/assets/RoomFlamenco.jpg"
+    },
+  
+    {
+      "id": "5",
+      "name": "Heaven on Earth",
+      "description": "Adan&Eva",
+      "price": "1700€",
+      "size": "Óleo sobre lienzo - Técnica mixta. 60x80cm ",
+      "image": "/assets/AdanEva.jpg",
+      "house": "/assets/HouseAdanEva.jpg",
+      "room": "/assets/RoomAdanEva.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Couple",
+      "description": "Caballos de ojos azules",
+      "price": "550€",
+      "size": "Acrílico. 40 x 50 cm",
+      "image": "/assets/Horse.jpg",
+      "room": "/assets/RoomHorse.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Observer",
+      "description": "David con flores",
+      "price": "3600€",
+      "size": "Óleo sobre lienzo - Técnica mixta. 140x90cm",
+      "image": "/assets/David.jpg",
+      "room": "/assets/RoomDavid.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Cultures",
+      "description": "Mezcla de culturas",
+      "price": "5000€",
+      "size": "Óleo sobre lienzo - Técnica mixta. 140x115cm",
+      "image": "/assets/Culture.jpg",
+      "room": "/assets/RoomCulture.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Disturbed",
+      "description": "Personas molestas",
+      "price": "2000€",
+      "size": "Óleo sobre lienzo - Técnica mixta. 178x76cm",
+      "image": "/assets/Disturbed.jpg",
+      "room": "/assets/RoomDisturbed.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Deep",
+      "description": "Reflejo profundo",
+      "price": "2200€",
+      "size": "Óleo sobre lienzo - Técnica mixta. 178x76cm",
+      "image": "/assets/Deep.jpg",
+      "room": "/assets/RoomDeep.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Moment",
+      "description": "Sólo un momento",
+      "price": "1200€",
+      "size": "Óleo sobre lienzo - Acrílico. 120x80cm",
+      "image": "/assets/Moment.jpg",
+      "room": "/assets/RoomMoment.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Depression",
+      "description": "Patriotismo depresivo",
+      "price": "2500€",
+      "size": "Óleo sobre lienzo - Técnica mixta.  178x76cm",
+      "image": "/assets/Depression.jpg",
+      "room": "/assets/RoomDepression.jpg"
+    },
+    {
+      "id": "13",
+      "name": "One million quartet",
+      "description": "Los músicos de moda",
+      "price": "2500€",
+      "size": "Óleo sobre lienzo - Técnica mixta.  178x76cm",
+      "image": "/assets/Cool.jpg",
+      "room": "/assets/RoomCool.jpg"
+    }
+   
+  ]
+  

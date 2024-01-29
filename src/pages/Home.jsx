@@ -19,11 +19,14 @@ import { motion } from "framer-motion";
 import Carousel from "../components/Carousel";
 import Collections from "./Collections";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
+
+  const { t, i18n } = useTranslation();
+
   const photos1 = [BigPaint, Sevillana, Buda, ToreroMandala];
   const photos2 = [Horse, HombreSentado, Llanto, Elena];
-
   const photos3 = [BigPaint, Sevillana, Buda, ToreroMandala, Horse, HombreSentado, Llanto, Elena];
 
 

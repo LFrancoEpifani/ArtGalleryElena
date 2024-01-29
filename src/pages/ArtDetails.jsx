@@ -1,10 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
-import artworks from '../data/artworks.json'
+import artworksEn from '../data/artworksEn.json'
+import artworksEs from '../data/artworksEs.json'
 import { Icon } from '@iconify/react';
 import Header from '../components/Header';
+import { useTranslation } from 'react-i18next';
 
 export default function ArtDetails() {
+
+  const { t, i18n } = useTranslation("common");
+  const currentLanguage = i18n.language;
 
   function randomPaint(array) {
     let currentIndex = array.length, randomIndex;
@@ -27,15 +32,15 @@ export default function ArtDetails() {
 
   useEffect(() =>{
     
-    const selectedArt = artworks.find((item) => item.id.toString() === artId);
+    const selectedArt = currentLanguage === "en" ? artworksEn.find((item) => item.id.toString() === artId) : artworksEs.find((item) => item.id.toString() === artId);
     setArt(selectedArt)
 
     setSelectedImage(selectedArt ? selectedArt.image : null);
 
-    const paintRandom = randomPaint(artworks.filter((item) => item.id.toString() !== artId));
+    const paintRandom = randomPaint(currentLanguage === "en" ? artworksEn.filter((item) => item.id.toString() !== artId) : artworksEs.filter((item) => item.id.toString() !== artId));
     setRandomArts(paintRandom.slice(0, 12));
 
-  }, [artId]);
+  }, [artId, currentLanguage]);
 
  
   const handleImageClick = (imageSrc) => {
@@ -87,16 +92,16 @@ export default function ArtDetails() {
        </div>
         <div className='flex flex-col gap-4 my-14'>
           <button className='bg-black text-white  py-4 lg:py-2 lg:px-14 rounded-full'>
-              Purchase
+              {t("purchase")}
           </button>
           <button className='bg-white text-black border-black border py-4 lg:py-2 lg:px-14 rounded-full'>
-            Make an offer
+          {t("makeOffer")}
           </button>
         </div>
        </div>
     </div>
     <div className='px-[12vw] my-12'>
-        <h2 className='font-bold text-2xl my-8'>More ArtWorks</h2>
+        <h2 className='font-bold text-2xl my-8'>{t("moreArtworks")}</h2>
           <div className='grid grid-cols-2 gap-2 items-start justify-start lg:grid-cols-4 lg:justify-center lg:items-center'>
             {randomArts.map((randomArt) => (
               <Link key={randomArt.id} to={`/art/${randomArt.id}`} onClick={goToTop}>

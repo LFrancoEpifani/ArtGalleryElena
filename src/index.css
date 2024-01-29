@@ -87,3 +87,11 @@ html {
 .slick-center {
   opacity: 1;
 }
+
+
+/* Select Language */
+.custom-select {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}
