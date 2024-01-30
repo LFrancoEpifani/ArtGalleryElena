@@ -47,6 +47,7 @@ export default function Header() {
               <h1>{t("home")}</h1>
             </li>
           </Link>
+
           <Link
             className={`${
               currentPath == "/collections" ? "bottom-rounded" : ""
@@ -55,18 +56,21 @@ export default function Header() {
           >
             <li className="text-black">{t("collections")}</li>
           </Link>
+
           <Link
             className={`${currentPath == "/about" ? "bottom-rounded" : ""}`}
             to={"/about"}
           >
             <li className="text-black">{t("about")}</li>
           </Link>
+
           <Link
             className={`${currentPath == "/galleries" ? "bottom-rounded" : ""}`}
             to={"/galleries"}
           >
             <li className="text-black">{t("galleries")}</li>
           </Link>
+
         </ul>
         <div className="flex justify-center items-center gap-2">
           <div className="flex justify-center items-center gap-2 z-30">
