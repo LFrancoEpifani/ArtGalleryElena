@@ -215,7 +215,7 @@ export default function About() {
         
           </div>
        
-          <div className="flex  flex-col gap-2 overflow-hidden w-full h-[32vh] mt-10 4xl:mt-20">
+          <div className="flex  flex-col gap-2 overflow-hidden w-full h-[24vh] 4xl:h-[32vh] mt-20">
             <motion.img
               style={{ y: topYCollage }}
               src={CollageFull}
