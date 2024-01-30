@@ -73,10 +73,14 @@ export default function ArtDetails() {
         <div className='bg-black'>
           <img className='object-contain w-90 shadow-xl border border-black' src={selectedImage} alt="" />
         </div>
-        <div className='flex lg:flex-col items-start gap-3'>
-          <img className='h-12 w-12 object-cover cursor-pointer' src={art.image} alt="" onClick={() => handleImageClick(art.image)}  />
-          <img className='h-12 w-12 object-cover cursor-pointer' src={art.house} alt="" onClick={() => handleImageClick(art.house)}  />
-        </div>
+        {art.image && art.house ? (
+            <div className='flex lg:flex-col items-start gap-3'>
+              <img className='h-12 w-12 object-cover cursor-pointer' src={art.image} alt="" onClick={() => handleImageClick(art.image)}  />
+              <img className='h-12 w-12 object-cover cursor-pointer' src={art.house} alt="" onClick={() => handleImageClick(art.house)}  />
+            </div>
+          ) : (
+            <img className='h-12 w-12 object-cover cursor-pointer' src={art.image || art.house} alt="" onClick={() => handleImageClick(art.image || art.house)}  />
+          )}
       </div>
        <div className='my-4'>
         <h2 className='font-bold text-2xl my-2'>Elena</h2>

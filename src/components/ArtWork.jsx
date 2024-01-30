@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function ArtWork({ name, price, size, image, description, id }) {
+export default function ArtWork({ name, image, id }) {
 
   return (
     <Link to={`/art/${id}`}>
@@ -9,7 +9,7 @@ export default function ArtWork({ name, price, size, image, description, id }) {
         <img
           src={image}
           alt={name}
-          className="object-contain w-[40vh] rounded-sm shadow-md shadow-gray-500"
+          className="object-contain w-[40vh] rounded-sm shadow-sm shadow-gray-500"
         />
 
       </div>
