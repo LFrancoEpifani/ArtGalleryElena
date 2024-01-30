@@ -17,7 +17,6 @@ import {
 } from "../motion/variants";
 import { motion } from "framer-motion";
 import Carousel from "../components/Carousel";
-import Collections from "./Collections";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 
@@ -78,7 +77,7 @@ export default function Home() {
    <div className="flex justify-center items-center my-12">
       <Link to={"/collections"}>
       <button className="bg-white text-black border border-black w-44 h-12 rounded-md font-cormorant font-semibold uppercase shadow-md">
-        Collections
+        {t('collections')}
       </button>
       </Link>
    </div>

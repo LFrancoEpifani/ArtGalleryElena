@@ -75,17 +75,7 @@ export default function Burger() {
                     </li>
                 </Link>
                 <hr className='w-60 border-gray-400' />
-                <Link  className={`${
-                    currentPath == "/galleries" ? "bottom-rounded-mobile" : ""
-                  }`}
-                  to={"/galleries"}
-                >
-                    <li className='flex items-center gap-3 text-lg'>
-                        <img className='w-6' src={GalleryIcon} alt="" />
-                        GALLERIES    
-                    </li>
-                </Link>
-                <hr className='w-60 border-gray-400' />
+               
             </ul>
                 <div className='absolute bottom-2 left-2 flex items-start gap-2'>
                     <Icon className='text-lg' icon="bi:instagram"/>

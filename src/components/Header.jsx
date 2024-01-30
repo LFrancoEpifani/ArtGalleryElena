@@ -4,6 +4,8 @@ import LogoElena from "/assets/LogoElenaNew.jpg";
 import Burger from "../components/Burger";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import artworksEn from '../data/artworksEn.json'
+import artworksEs from '../data/artworksEs.json'
 
 export default function Header() {
   const location = useLocation();
@@ -64,12 +66,6 @@ export default function Header() {
             <li className="text-black">{t("about")}</li>
           </Link>
 
-          <Link
-            className={`${currentPath == "/galleries" ? "bottom-rounded" : ""}`}
-            to={"/galleries"}
-          >
-            <li className="text-black">{t("galleries")}</li>
-          </Link>
 
         </ul>
         <div className="flex justify-center items-center gap-2">
