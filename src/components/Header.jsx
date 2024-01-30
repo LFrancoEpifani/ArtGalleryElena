@@ -73,7 +73,7 @@ export default function Header() {
 
         </ul>
         <div className="flex justify-center items-center gap-2">
-          <div className="flex justify-center items-center gap-1">
+          <div className="flex justify-center items-center gap-2 z-30">
             <div
               onMouseEnter={handleHoverEnter}
               onMouseLeave={handleHoverLeave}
@@ -84,18 +84,20 @@ export default function Header() {
                 <Icon icon="ep:arrow-down-bold" />
               </button>
               {isHovered ? (
-                <div className="absolute bg-white py-1">
+                <div className="absolute w-22 flex flex-col right-0">
                   <button
                     onClick={() => changeLanguage("en")}
-                    className="font-bold text-xs md:text-sm"
+                    className="flex items-center gap-1 font-bold text-xs md:text-sm  p-1 rounded-t rounded-x bg-white hover:bg-black hover:text-white"
                   >
-                    <span>EN</span>
+                    <span>{t("languageEn")}</span>
+                    <img className="w-4" src="/assets/flags/united.svg" alt="united" />
                   </button>
                   <button
                     onClick={() => changeLanguage("es")}
-                    className="font-bold text-xs md:text-sm"
+                    className="flex items-center gap-1 font-bold text-xs md:text-sm  p-1  rounded-b rounded-x bg-white hover:bg-black hover:text-white"
                   >
-                    <span>ES</span>
+                    <span>{t("languageEs")}</span>
+                    <img className="w-4" src="/assets/flags/spain.svg" alt="spain" />
                   </button>
                 </div>
               ) : (
