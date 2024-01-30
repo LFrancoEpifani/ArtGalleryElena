@@ -26,7 +26,7 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header className="">
       <nav className="montserrat h-[8vh] flex justify-between items-center text-black px-1 border-y border-gray-400 2xl:py-8">
         <Link to={"/"}>
           <div className="flex justify-center items-center">
