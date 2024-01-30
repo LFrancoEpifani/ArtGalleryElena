@@ -57,12 +57,15 @@ export default function About() {
             <p className='text-center leading-8 my-4 text-gray-800'>
             Elena, an experienced creative art teacher, brings 8 years of expertise to her role, focusing on instructing students in drawing, painting, sculpture, yoga, and meditation. She excels at adapting her teaching methods to cater to diverse learning styles. Elena fosters a deep understanding of artistic concepts and encourages the development of students' creative and spiritual abilities. Her teaching is inspiring, offering a holistic art education program with practical exercises in various media. Elena provides constructive feedback, positive reinforcement, and gentle guidance, ensuring incremental improvement. She adeptly manages groups of up to 5 students, ages 6 to 50, fostering a productive learning environment with detailed lesson plans.
             </p>
-            <button className='flex justify-center items-center gap-1'>
+            
+           <a href="https://www.instagram.com/elena.art.studio.es/">
+             <button className='flex justify-center items-center gap-1'>
               <p className='border-b-2 border-black'>
               Send me a message
               </p>
               <Icon className='text-xl' icon="iconamoon:arrow-top-right-1-light" />
             </button>
+           </a>
           </div>
         </div>
         <img
