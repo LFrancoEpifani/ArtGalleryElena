@@ -79,7 +79,7 @@ export default function Header() {
               onMouseLeave={handleHoverLeave}
               className="relative"
             >
-              <button className="flex items-start md:items-center  font-bold text-xs md:text-sm">
+              <button className="flex items-start md:items-center font-bold text-xs md:text-sm">
                 <span className="uppercase">{currentLanguage}</span>
                 <Icon icon="ep:arrow-down-bold" />
               </button>
@@ -87,14 +87,14 @@ export default function Header() {
                 <div className="absolute w-22 flex flex-col right-0">
                   <button
                     onClick={() => changeLanguage("en")}
-                    className="flex items-center justify-center gap-1 font-bold text-xs md:text-sm py-2 px-4 rounded-t rounded-x bg-white hover:bg-black hover:text-white"
+                    className="flex items-center justify-center gap-1 font-bold text-xs md:text-sm py-2 border border-black  px-4 rounded-t rounded-x bg-white hover:bg-black hover:text-white"
                   >
                     <span>{t("languageEn")}</span>
                     <img className="w-4" src="/assets/flags/united.svg" alt="united" />
                   </button>
                   <button
                     onClick={() => changeLanguage("es")}
-                    className="flex items-center justify-center gap-1 font-bold text-xs md:text-sm py-2 px-4  rounded-b rounded-x bg-white hover:bg-black hover:text-white"
+                    className="flex items-center justify-center gap-1 font-bold text-xs md:text-sm py-2 border border-black  px-4  rounded-b rounded-x bg-white hover:bg-black hover:text-white"
                   >
                     <span>{t("languageEs")}</span>
                     <img className="w-4" src="/assets/flags/spain.svg" alt="spain" />

@@ -1,15 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
-import artworksEn from '../data/artworksEn.json'
-import artworksEs from '../data/artworksEs.json'
+import artworks from '../data/artworks.json'
 import { Icon } from '@iconify/react';
 import Header from '../components/Header';
 import { useTranslation } from 'react-i18next';
 
 export default function ArtDetails() {
-
-  const { t, i18n } = useTranslation("common");
-  const currentLanguage = i18n.language;
 
   function randomPaint(array) {
     let currentIndex = array.length, randomIndex;
@@ -25,6 +21,8 @@ export default function ArtDetails() {
     return array;
   }
 
+  const {t} = useTranslation('common');
+
   const {artId} = useParams();
   const [art, setArt] = useState(null);
   const [randomArts, setRandomArts] = useState([]);
@@ -32,19 +30,19 @@ export default function ArtDetails() {
 
   useEffect(() =>{
     
-    const selectedArt = currentLanguage === "en" ? artworksEn.find((item) => item.id.toString() === artId) : artworksEs.find((item) => item.id.toString() === artId);
+    const selectedArt = artworks.find((item) => item.id.toString() === artId);
     setArt(selectedArt)
 
     setSelectedImage(selectedArt ? selectedArt.image : null);
 
-    const paintRandom = randomPaint(currentLanguage === "en" ? artworksEn.filter((item) => item.id.toString() !== artId) : artworksEs.filter((item) => item.id.toString() !== artId));
+    const paintRandom = randomPaint(artworks.filter((item) => item.id.toString() !== artId));
     setRandomArts(paintRandom.slice(0, 12));
 
-  }, [artId, currentLanguage]);
+  }, [artId]);
 
  
   const handleImageClick = (imageSrc) => {
-    setSelectedImage(imageSrc);
+    setSelectedImage(imageSrc); 
   };
 
   if(!art){
@@ -104,19 +102,13 @@ export default function ArtDetails() {
         </div>
        </div>
     </div>
-    <div className='px-[12vw] my-12'>
+    <div className='px-[14vw] my-12'>
         <h2 className='font-bold text-2xl my-8'>{t("moreArtworks")}</h2>
           <div className='grid grid-cols-2 gap-2 items-start justify-start lg:grid-cols-4 lg:justify-center lg:items-center'>
             {randomArts.map((randomArt) => (
               <Link key={randomArt.id} to={`/art/${randomArt.id}`} onClick={goToTop}>
                 <div key={randomArt.id}>
                   <img className='object-contain w-35 lg:w-50 shadow-xl shadow-gray-300 rounded-sm' src={randomArt.image} alt={randomArt.name} />
-                  <div className="text-start mb-4 lg:my-2">
-                    <h2 className="text-lg font-semibold">{randomArt.name}</h2>
-                    <p className="text-[12px] italic text-gray-500">{randomArt.description}</p>
-                    <p className="text-xs text-gray-800 font-medium">{randomArt.size}</p>
-                    <p className="text-sm font-semibold my-2">{randomArt.price}</p>
-                  </div>
                 </div>
               </Link>
             ))}

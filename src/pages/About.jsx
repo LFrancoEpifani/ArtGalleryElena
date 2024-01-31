@@ -49,8 +49,6 @@ export default function About() {
     setScrollPos(latest * 3);
   });
 
-  console.log(scrollPos);
-
   return (
     <>
       <Header />

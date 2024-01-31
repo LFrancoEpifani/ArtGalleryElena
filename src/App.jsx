@@ -7,6 +7,9 @@ import Galleries from './pages/Galleries';
 import ArtDetails from './pages/ArtDetails';
 
 export default function App() {
+
+
+
     return (
         <Router>
             <Routes>
