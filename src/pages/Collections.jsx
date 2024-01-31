@@ -2,27 +2,16 @@ import React, { useRef } from "react";
 import Header from "../components/Header";
 import { Icon } from "@iconify/react";
 import Artwork from "../components/ArtWork";
-import artworksEn from '../data/artworksEn.json'
-import artworksEs from '../data/artworksEs.json'
+import artworks from '../data/artworks.json'
 import { useState, useEffect } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { useTranslation } from "react-i18next";
 
 export default function Collections() {
-  const [artworks, setArtworks] = useState([]);
+  const [artwork, setArtworks] = useState([]);
   const gridRef = useRef(null);
 
   const { t, i18n } = useTranslation('collections');
-  const artWorksJson = t('items');
-  const currentLanguage = i18n.language;
-
-  useEffect(() => {
-    if(currentLanguage === "en") {
-      setArtworks(artworksEn);
-    } else {
-      setArtworks(artworksEs);
-    }
-  }, [currentLanguage]);
 
   return (
     <>

@@ -50,8 +50,6 @@ export default function About() {
     setScrollPos(latest * 3);
   });
 
-  console.log(scrollPos)
-
   return (
     <>
       <Header />
@@ -63,28 +61,28 @@ export default function About() {
           <div className="flex flex-col sm:flex-row gap-10 ">
 
          
-          <div className="flex  flex-col gap-2 overflow-hidden w-1/2  h-[50vh] rounded-[8px] pl-[8vw]">
+          <div className="flex  flex-col gap-2 overflow-hidden w-1/2 h-[50vh] rounded-[8px] pl-[4vw]">
             <motion.img
               style={{ y: topY }}
               src={ElenaPainting}
-              className="   w-full  mx-auto min-h-full rounded-[8px]"
+              className="   w-full mx-auto h-[100vh] rounded-[8px] object-cover"
             />
 
             <motion.img
               style={{ y: topY }}
               src={ElenaStudio}
-              className="  w-full   mx-auto min-h-full rounded-[8px]"
+              className="  w-full   mx-auto h-[100vh] rounded-[8px]"
             />
 
             <motion.img
               style={{ y: topY }}
               src={ElenaProfile}
-              className="  w-full  mx-auto min-h-full rounded-[8px]"
+              className="  w-full  mx-auto h-[100vh] rounded-[8px] object-cover"
             />
           </div>
           <div className="relative w-1/2 z-40 ">
             <motion.div
-              className="absolute top-0 left-0 flex flex-col gap-6 pr-[8vw]"
+              className="flex flex-col gap-6 pr-[4vw]"
              
               animate={
                 scrollPos >= 0 && scrollPos <= scrollTotal / 3 + 0.2
@@ -94,11 +92,11 @@ export default function About() {
               variants={scrollTextVariants}
             >
               <div className="">
-                <div className="p-6 4xl:p-12 flex flex-col items-center justify-center">
-                  <h3 className="sorts text-2xl 4xl:text-4xl text-center uppercase">
+                <div className="p-6 lg:p-2 2xl:p-12 flex flex-col items-center justify-center">
+                  <h3 className="sorts text-2xl 2xl:text-5xl text-center uppercase">
                     Elena Salova
                   </h3>
-                  <p className="text-center leading-6 4xl:leading-8 my-4 text-xs text-gray-800">
+                  <p className="text-center leading-6 2xl:leading-8 2xl:text-[16px] my-4 text-xs text-gray-800">
                     Elena&apos;s artistic journey blossomed amidst the
                     picturesque landscapes of Novopskov in Ukraine&apos;s
                     Luhansk region. Her earliest strokes foretold a lifetime of
