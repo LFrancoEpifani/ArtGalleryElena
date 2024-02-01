@@ -20,6 +20,7 @@ export default function ArtDetails() {
 
     return array;
   }
+  
 
   const {t} = useTranslation('common');
 
@@ -69,40 +70,40 @@ export default function ArtDetails() {
       <div className='lg:flex p-10 justify-evenly items-center'>
       <div className='flex flex-col lg:flex-row gap-4 lg:gap-8 items-center'>
         <div className='bg-black'>
-          <img className='object-contain w-90 shadow-xl border border-black' src={selectedImage} alt="" />
+          <img className='object-contain w-90 shadow-xl border border-black 2xl:w-100 2xl:h-100vh' src={selectedImage} alt="" />
         </div>
         {art.image && art.house ? (
             <div className='flex lg:flex-col items-start gap-3'>
-              <img className='h-12 w-12 object-cover cursor-pointer' src={art.image} alt="" onClick={() => handleImageClick(art.image)}  />
-              <img className='h-12 w-12 object-cover cursor-pointer' src={art.house} alt="" onClick={() => handleImageClick(art.house)}  />
+              <img className='h-12 w-12 object-cover cursor-pointer 2xl:h-20 2xl:w-20' src={art.image} alt="" onClick={() => handleImageClick(art.image)}  />
+              <img className='h-12 w-12 object-cover cursor-pointer 2xl:h-20 2xl:w-20' src={art.house} alt="" onClick={() => handleImageClick(art.house)}  />
             </div>
           ) : (
-            <img className='h-12 w-12 object-cover cursor-pointer' src={art.image || art.house} alt="" onClick={() => handleImageClick(art.image || art.house)}  />
+            <img className='h-12 w-12 object-cover cursor-pointer 2xl:h-20 2xl:w-20' src={art.image || art.house} alt="" onClick={() => handleImageClick(art.image || art.house)}  />
           )}
       </div>
        <div className='my-4'>
-        <h2 className='font-bold text-2xl my-2'>Elena</h2>
+        <h2 className='font-bold text-2xl my-2 2xl:text-4xl'>Elena</h2>
         <div className='my-2'>
-          <p className='text-lg'>{art.name}</p>
-          <p className='text-[10px] text-gray-500'>{art.description}</p>
+          <p className='text-lg 2xl:text-2xl'>{art.name}</p>
+          <p className='text-[10px] text-gray-500 2xl:text-[15px] 2xl:my-4'>{art.description}</p>
         </div>
-        <p className='mb-8'>{art.size}</p>
+        <p className='mb-8 2xl:text-2xl'>{art.size}</p>
        <div>
        <hr className='border border-gray-300' />
-        <p className='my-3 font-semibold'>{art.price}</p>
+        <p className='my-3 font-semibold 2xl:text-2xl'>{art.price}</p>
         <hr className='border border-gray-300' />
        </div>
         <div className='flex flex-col gap-4 my-14'>
-          <button className='bg-black text-white  py-4 lg:py-2 lg:px-14 rounded-full'>
+          <button className='bg-black text-white  py-4 lg:py-2 lg:px-14 rounded-full 2xl:py-4 2xl:text-xl'>
               {t("purchase")}
           </button>
-          <button className='bg-white text-black border-black border py-4 lg:py-2 lg:px-14 rounded-full'>
+          <button className='bg-white text-black border-black border py-4 lg:py-2 lg:px-14 rounded-full 2xl:py-4 2xl:text-xl'>
           {t("makeOffer")}
           </button>
         </div>
        </div>
     </div>
-    <div className='px-[14vw] my-12'>
+    <div className='px-[14vw] my-12 2xl:my-30'>
         <h2 className='font-bold text-2xl my-8'>{t("moreArtworks")}</h2>
           <div className='grid grid-cols-2 gap-2 items-start justify-start lg:grid-cols-4 lg:justify-center lg:items-center'>
             {randomArts.map((randomArt) => (
