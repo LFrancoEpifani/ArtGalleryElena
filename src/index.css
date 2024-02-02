@@ -111,3 +111,13 @@ html {
 }
 
 
+.containerScroll {
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.sectionScroll {
+  scroll-snap-align: start;
+  height: 100vh;
+}

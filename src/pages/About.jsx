@@ -33,12 +33,6 @@ export default function About() {
     target: containerRef,
   });
 
-  const topY = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["0%", isMobile ? "-210%" : "-210%"]
-  );
-
   const topYCollage = useTransform(
     scrollYProgress,
     [0, 1],
@@ -52,45 +46,33 @@ export default function About() {
   return (
     <>
       <Header />
-      <section ref={containerRef} className="relative z-20 h-[300vh] ">
-        <div className="sticky top-22  4xl:top-28 ">
-          <div className="flex flex-col sm:flex-row gap-10 ">
-            <div className="flex  flex-col gap-1 md:gap-2 overflow-hidden md:w-[50vw] h-[35vh] md:h-[50vh] rounded-[8px] px-8 md:px-0 md:pl-32 2xl:pl-40">
-              <motion.img
-                style={{ y: topY }}
-                src={ElenaPainting}
-                className="   w-full  mx-auto min-h-full rounded-[8px]"
-              />
-
-              <motion.img
-                style={{ y: topY }}
-                src={ElenaStudio}
-                className="  w-full   mx-auto min-h-full rounded-[8px]"
-              />
-
-              <motion.img
-                style={{ y: topY }}
-                src={ElenaProfile}
-                className="  w-full  mx-auto min-h-full rounded-[8px]"
-              />
-            </div>
-            <div className="relative h-[45vh] md:w-[50vw] h z-40">
+      <section ref={containerRef} className=" relative z-20 h-[300vh] ">
+        <div className=" sticky top-4 md:top-10 ">
+          <div className="mt-4 md:mt-10 md:px-28 2xl:px-40">
+            <div className="relative w-full h-[100vh] md:h-[60vh] z-40">
               <motion.div
-                className="absolute top-0 left-0 flex flex-col gap-6 px-8 md:px-0 md:pr-32 2xl:pr-40"
+                className="absolute top-0 left-0 flex flex-col gap-6"
                 initial="visible1"
                 animate={
-                  scrollPos >= 0 && scrollPos <= scrollTotal / 3 + 0.2
+                  scrollPos >= 0 && scrollPos <= scrollTotal / 3
                     ? "visible1"
                     : "oculto"
                 }
                 variants={scrollTextVariants}
               >
-                <div className="">
-                  <div className="md:p-6 4xl:p-12 flex flex-col items-center justify-center">
+                <div className="flex flex-col md:flex-row  items-start justify-center ">
+                  <div className="w-full md:w-5/12 mx-auto">
+                    <img
+                      className="w-8/12 md:w-10/12 mx-auto  h-[40vh] md:h-[60vh] rounded"
+                      src={ElenaPainting}
+                      alt=""
+                    />
+                  </div>
+                  <div className="w-10/12 md:w-7/12 mx-auto md:p-6 4xl:p-12 mt-6 md:mt-0 flex flex-col items-center justify-center">
                     <h3 className="sorts text-2xl 4xl:text-4xl text-center uppercase">
                       Elena Salova
                     </h3>
-                    <p className="text-center leading-5 2xl:leading-6 4xl:leading-8 my-4 text-[9px] 2xl:text-[11px] 4xl:text-sm text-gray-800">
+                    <p className="text-center leading-5 md:leading-6 4xl:leading-8 my-4 text-[12px] 2xl:text-[14px] 4xl:text-lg text-gray-800">
                       Elena&apos;s artistic journey blossomed amidst the
                       picturesque landscapes of Novopskov in Ukraine&apos;s
                       Luhansk region. Her earliest strokes foretold a lifetime
@@ -117,25 +99,32 @@ export default function About() {
                 </div>
               </motion.div>
               <motion.div
-                className="absolute top-0 left-0 flex flex-col gap-6 px-8 md:px-0 md:pr-32 2xl:pr-40"
+                className="absolute top-0 left-0 flex flex-col gap-6"
                 initial="oculto"
                 animate={
-                  scrollPos > scrollTotal / 3 + 0.2 &&
-                  scrollPos <= 2 * (scrollTotal / 3) + 0.2
+                  scrollPos > scrollTotal / 3 &&
+                  scrollPos <= 2 * (scrollTotal / 3)
                     ? "visible1"
                     : "oculto"
                 }
                 variants={scrollTextVariants}
               >
-                <div className="">
-                  <div className="md:p-6 4xl:p-12 flex flex-col items-center justify-center">
+                <div className="flex flex-col md:flex-row  items-start justify-center ">
+                  <div className="w-full md:w-5/12 mx-auto">
+                    <img
+                      className="w-8/12 md:w-10/12 mx-auto  h-[40vh] md:h-[60vh] rounded"
+                      src={ElenaStudio}
+                      alt=""
+                    />
+                  </div>
+                  <div className="w-10/12 md:w-7/12 mx-auto md:p-6 4xl:p-12 mt-6 md:mt-0  flex flex-col items-center justify-center">
                     <h3
                       id="yoga"
                       className="sorts text-2xl 4xl:text-4xl text-center uppercase"
                     >
                       ART TEACHER & YOGA INSTRUCTOR
                     </h3>
-                    <p className="text-center leading-5 2xl:leading-6 4xl:leading-8 my-4 text-[9px] 2xl:text-[11px] 4xl:text-sm text-gray-800">
+                    <p className="text-center leading-5 md:leading-6 4xl:leading-8 my-4 text-[12px] 2xl:text-[14px] 4xl:text-lg text-gray-800">
                       Elena, an experienced creative art teacher, brings 8 years
                       of expertise to her role, focusing on instructing students
                       in drawing, painting, sculpture, yoga, and meditation. She
@@ -152,43 +141,44 @@ export default function About() {
                       environment with detailed lesson plans.
                     </p>
 
-                    {!isMobile ? (
-                      <a href="https://www.instagram.com/elena.art.studio.es/">
-                        <button className="flex justify-center items-center gap-1">
-                          <p className="border-b-2 border-black">
-                            Send me a message
-                          </p>
-                          <Icon
-                            className="text-xl"
-                            icon="iconamoon:arrow-top-right-1-light"
-                          />
-                        </button>
-                      </a>
-                    ) : (
-                      <></>
-                    )}
+                    <a href="https://www.instagram.com/elena.art.studio.es/">
+                      <button className="flex justify-center items-center gap-1">
+                        <p className="border-b-2 border-black">
+                          Send me a message
+                        </p>
+                        <Icon
+                          className="text-xl"
+                          icon="iconamoon:arrow-top-right-1-light"
+                        />
+                      </button>
+                    </a>
                   </div>
                 </div>
               </motion.div>
               <motion.div
-                className="absolute top-0 left-0 flex flex-col gap-6 px-8 md:px-0 md:pr-32 2xl:pr-40"
+                className="absolute top-0 left-0 flex flex-col gap-6"
                 initial="oculto"
                 animate={
-                  scrollPos > 2 * (scrollTotal / 3) + 0.2
-                    ? "visible1"
-                    : "oculto"
+                  scrollPos > 2 * (scrollTotal / 3) ? "visible1" : "oculto"
                 }
                 variants={scrollTextVariants}
               >
-                <div className="">
-                  <div className="md:p-6 4xl:p-12 flex flex-col items-center justify-center">
+                <div className="flex flex-col md:flex-row  items-start justify-center ">
+                  <div className="w-full md:w-5/12 mx-auto">
+                    <img
+                      className="w-8/12 md:w-10/12 mx-auto  h-[40vh] md:h-[60vh] rounded"
+                      src={ElenaProfile}
+                      alt=""
+                    />
+                  </div>
+                  <div className="w-10/12 md:w-7/12 mx-auto md:p-6 4xl:p-12 mt-6 md:mt-0 flex flex-col items-center justify-center">
                     <h3
                       id="yoga"
                       className="sorts text-2xl 4xl:text-4xl text-center uppercase"
                     >
                       BIOGRAPHY
                     </h3>
-                    <p className="text-center leading-5 2xl:leading-6 4xl:leading-8 my-4 text-[9px] 2xl:text-[11px] 4xl:text-sm text-gray-800">
+                    <p className="text-center leading-5 md:leading-6 4xl:leading-8 my-4 text-[12px] 2xl:text-[14px] 4xl:text-lg text-gray-800">
                       Elena, a Ukrainian artist from Novopskov, excelled in
                       various painting techniques and studied at Kyiv&apos;s
                       &quot;Oberig&quot; art courses, Odessa State Art College,
@@ -215,7 +205,7 @@ export default function About() {
             </div>
           </div>
           {!isMobile ? (
-            <div className="flex  flex-col  gap-2 overflow-hidden w-full h-[32vh] mt-20">
+            <div className="flex  flex-col  gap-2 overflow-hidden w-full h-[24vh] 4xl:h-[30vh] mt-20">
               <motion.img
                 style={{ y: topYCollage }}
                 src={CollageFull}
@@ -228,8 +218,8 @@ export default function About() {
           )}
         </div>
       </section>
-      <div>
-        <div className="flex flex-col md:flex-row overflow-hidden p-[4vw]">
+      <div className="">
+        <div className=" flex flex-col md:flex-row overflow-hidden md:py-[5vh] 2xl:py-[10vh] 4xl:py-[18vh] px-[4vw]">
           <div className="w-full md:w-[35vw] text-center">
             <h3 className="text-xl font-bold my-4">Inesa Kochur</h3>
             <p className="w-full px-4 leading-8">
@@ -247,7 +237,7 @@ export default function About() {
             </div>
           ) : (
             <></>
-          )}  
+          )}
           <div className="w-full md:w-[35vw] text-center">
             <h3 className="text-xl font-bold my-4">Miguel Valdayo Boza</h3>
             <p className="w-full px-4 leading-8 ">
