@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/Home';  
 import Collections from './pages/Collections';
@@ -7,8 +7,6 @@ import Galleries from './pages/Galleries';
 import ArtDetails from './pages/ArtDetails';
 
 export default function App() {
-
-
 
     return (
         <Router>

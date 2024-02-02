@@ -111,13 +111,8 @@ html {
 }
 
 
-.containerScroll {
-  max-height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+input[type="range"] {
+  cursor: pointer;
+  width: 100px;
 }
 
-.sectionScroll {
-  scroll-snap-align: start;
-  height: 100vh;
-}
