@@ -43,6 +43,8 @@ export default function About() {
     setScrollPos(latest * 3);
   });
 
+  console.log(scrollPos)
+
   return (
     <>
       <Header />
@@ -54,7 +56,7 @@ export default function About() {
                 className="absolute top-0 left-0 flex flex-col gap-6"
                 initial="visible1"
                 animate={
-                  scrollPos >= 0 && scrollPos <= scrollTotal / 3
+                  scrollPos >= 0 && scrollPos <= scrollTotal / 3 - 0.2
                     ? "visible1"
                     : "oculto"
                 }
@@ -102,8 +104,8 @@ export default function About() {
                 className="absolute top-0 left-0 flex flex-col gap-6"
                 initial="oculto"
                 animate={
-                  scrollPos > scrollTotal / 3 &&
-                  scrollPos <= 2 * (scrollTotal / 3)
+                  scrollPos > scrollTotal / 3 - 0.2 &&
+                  scrollPos <= 2 * (scrollTotal / 3 + 0.2)
                     ? "visible1"
                     : "oculto"
                 }
@@ -159,7 +161,7 @@ export default function About() {
                 className="absolute top-0 left-0 flex flex-col gap-6"
                 initial="oculto"
                 animate={
-                  scrollPos > 2 * (scrollTotal / 3) ? "visible1" : "oculto"
+                  scrollPos > 2 * (scrollTotal / 3 + 0.2) ? "visible1" : "oculto"
                 }
                 variants={scrollTextVariants}
               >
