@@ -24,11 +24,7 @@ export default function ArtWork({ artworks }) {
       )
     });
   };
-
   const filteredArtworks = filterArtworks(artworks); 
-  
-
-  
 
   return (
    <div>
@@ -41,8 +37,8 @@ export default function ArtWork({ artworks }) {
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 900: 4}}>
         <Masonry>
     {filteredArtworks.map(artwork => (
-      <Link to={`/art/${artwork.id}`}>
-        <li className="p-2" key={artwork.id}>
+      <Link key={artwork.id} to={`/art/${artwork.id}`}>
+        <li className="p-2">
           <img src={artwork.image} alt={artwork.name} />
         </li>
       </Link>

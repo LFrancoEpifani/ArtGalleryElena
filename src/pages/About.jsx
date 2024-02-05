@@ -59,19 +59,19 @@ export default function About() {
               <motion.img
                 style={{ y: topY }}
                 src={ElenaPainting}
-                className="   w-full  mx-auto min-h-full rounded-[8px]"
+                className="w-full  mx-auto min-h-full rounded-[8px] object-cover"
               />
 
               <motion.img
                 style={{ y: topY }}
                 src={ElenaStudio}
-                className="  w-full   mx-auto min-h-full rounded-[8px]"
+                className="w-full mx-auto min-h-full rounded-[8px] object-cover"
               />
 
               <motion.img
                 style={{ y: topY }}
                 src={ElenaProfile}
-                className="  w-full  mx-auto min-h-full rounded-[8px]"
+                className="  w-full  mx-auto min-h-full rounded-[8px] object-cover"
               />
             </div>
             <div className="relative h-[45vh] md:w-[50vw] h z-40">
@@ -261,7 +261,7 @@ export default function About() {
           </div>
         </div>
 
-        <img className="w-full h-[40vh]" src={ImageGroup} alt="photoGr" />
+        <img className="w-full h-[60vh]" src={PhotoGroup} alt="photoGr" />
       </div>
       <Footer />
     </>
