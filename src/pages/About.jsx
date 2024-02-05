@@ -36,7 +36,7 @@ export default function About() {
 
   const testimonialsRef = useRef(null);
   const [scrollPosTes, setScrollPosTes] = useState(0);
-  const [scrollTotalTes, setScrollTotalTes] = useState(2);
+  const [scrollTotalTes, setScrollTotalTes] = useState(4);
 
   const { scrollYProgress: scrollYProgressContainer } = useScroll({
     target: containerRef,
@@ -57,14 +57,9 @@ export default function About() {
   });
 
   useMotionValueEvent(scrollYProgressTestimonials, "change", (latest) => {
-    setScrollPosTes(latest * 2);
+    setScrollPosTes(latest * 4);
   });
 
-  useEffect(() => {
-
-    if(isMobile) setScrollPosTes(4);
-
-  }, [isMobile]);
 
   return (
     <>
@@ -95,7 +90,7 @@ export default function About() {
                     <h3 className="sorts text-2xl 4xl:text-4xl text-center uppercase">
                       Elena Salova
                     </h3>
-                    <p className="text-center leading-5 md:leading-6 4xl:leading-8 my-4 text-[12px] 2xl:text-[14px] 4xl:text-lg text-gray-800">
+                    <p className="text-center leading-5 md:leading-6 4xl:leading-8 my-4 text-[11px] 2xl:text-[14px] 4xl:text-lg text-gray-800">
                       Elena&apos;s artistic journey blossomed amidst the
                       picturesque landscapes of Novopskov in Ukraine&apos;s
                       Luhansk region. Her earliest strokes foretold a lifetime
@@ -147,7 +142,7 @@ export default function About() {
                     >
                       ART TEACHER & YOGA INSTRUCTOR
                     </h3>
-                    <p className="text-center leading-5 md:leading-6 4xl:leading-8 my-4 text-[12px] 2xl:text-[14px] 4xl:text-lg text-gray-800">
+                    <p className="text-center leading-5 md:leading-6 4xl:leading-8 my-4 text-[11px] 2xl:text-[14px] 4xl:text-lg text-gray-800">
                       Elena, an experienced creative art teacher, brings 8 years
                       of expertise to her role, focusing on instructing students
                       in drawing, painting, sculpture, yoga, and meditation. She
@@ -201,7 +196,7 @@ export default function About() {
                     >
                       BIOGRAPHY
                     </h3>
-                    <p className="text-center leading-5 md:leading-6 4xl:leading-8 my-4 text-[12px] 2xl:text-[14px] 4xl:text-lg text-gray-800">
+                    <p className="text-center leading-5 md:leading-6 4xl:leading-8 my-4 text-[11px] 2xl:text-[14px] 4xl:text-lg text-gray-800">
                       Elena, a Ukrainian artist from Novopskov, excelled in
                       various painting techniques and studied at Kyiv&apos;s
                       &quot;Oberig&quot; art courses, Odessa State Art College,
@@ -377,6 +372,7 @@ export default function About() {
             </>
           ) : (
             <>
+            {console.log(scrollPosTes)}
           
               <div className="absolute top-[10vh]  left-0 w-full  overflow-hidden px-8">
                 <motion.div

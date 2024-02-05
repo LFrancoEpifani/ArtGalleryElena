@@ -97,9 +97,9 @@ export default function ArtDetails() {
           <button className='bg-black text-white  py-4 lg:py-2 lg:px-14 rounded-full 2xl:py-4 2xl:text-xl'>
               {t("purchase")}
           </button>
-          <button className='bg-white text-black border-black border py-4 lg:py-2 lg:px-14 rounded-full 2xl:py-4 2xl:text-xl'>
+          {/* <button className='bg-white text-black border-black border py-4 lg:py-2 lg:px-14 rounded-full 2xl:py-4 2xl:text-xl'>
           {t("makeOffer")}
-          </button>
+          </button> */}
         </div>
        </div>
     </div>
