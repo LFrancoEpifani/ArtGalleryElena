@@ -64,36 +64,10 @@ export default function About() {
   return (
     <>
       <Header />
-<<<<<<< HEAD
-      <section ref={containerRef} className="relative z-20 h-[300vh] ">
-        <div className="sticky top-22  4xl:top-28 ">
-          <div className="flex flex-col sm:flex-row gap-10 ">
-            <div className="flex  flex-col gap-1 md:gap-2 overflow-hidden md:w-[50vw] h-[35vh] md:h-[50vh] rounded-[8px] px-8 md:px-0 md:pl-32 2xl:pl-40">
-              <motion.img
-                style={{ y: topY }}
-                src={ElenaPainting}
-                className="w-full  mx-auto min-h-full rounded-[8px] object-cover"
-              />
-
-              <motion.img
-                style={{ y: topY }}
-                src={ElenaStudio}
-                className="w-full mx-auto min-h-full rounded-[8px] object-cover"
-              />
-
-              <motion.img
-                style={{ y: topY }}
-                src={ElenaProfile}
-                className="  w-full  mx-auto min-h-full rounded-[8px] object-cover"
-              />
-            </div>
-            <div className="relative h-[45vh] md:w-[50vw] h z-40">
-=======
       <section ref={containerRef} className=" relative z-20 h-[300vh] ">
         <div className=" sticky top-4 md:top-10 ">
           <div className="mt-4 md:mt-10 md:px-28 2xl:px-40">
             <div className="relative w-full h-[100vh] md:h-[60vh] z-40">
->>>>>>> 4343038b80602c03d81f307313c98a475a8dc20f
               <motion.div
                 className="absolute top-0 left-0 flex flex-col gap-6"
                 initial="visible"
@@ -497,11 +471,6 @@ export default function About() {
         </div>
       </section>
 
-<<<<<<< HEAD
-        <img className="w-full h-[60vh]" src={PhotoGroup} alt="photoGr" />
-      </div>
-=======
->>>>>>> 4343038b80602c03d81f307313c98a475a8dc20f
       <Footer />
     </>
   );

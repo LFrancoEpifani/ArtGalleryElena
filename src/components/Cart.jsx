@@ -31,9 +31,16 @@ return (
       <div className='border-b border-gray-400'>
         Total: {items.reduce((acc, item) => acc + item.price * item.quantity, 0)}€
       </div>
-    <button onClick={clearCart} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white text-sm py-2 px-3 rounded focus:outline-none focus:shadow-outline">
-      Delete All
-    </button>
+    
+        <div className='flex justify-between items-center'>
+        <button className="mt-4 bg-green-500 hover:bg-green-700 text-white text-sm py-2 px-3 rounded focus:outline-none focus:shadow-outline">
+           Purchase
+        </button>
+      
+            <button onClick={clearCart} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white text-sm py-2 px-3 rounded focus:outline-none focus:shadow-outline">
+            <Icon icon="bi:cart-x" />
+            </button>
+        </div>
   </div>
    
 );
