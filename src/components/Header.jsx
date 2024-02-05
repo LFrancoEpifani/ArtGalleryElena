@@ -5,6 +5,7 @@ import Burger from "../components/Burger";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import Cart from "./Cart";
+import { useCart } from '../CartContext';
 
 export default function Header() {
   const location = useLocation();
@@ -29,6 +30,11 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleCart = () => setIsOpen(!isOpen);
+
+  const { items } = useCart();
+
+  const totalItemsInCart = items.reduce((total, item) => total + item.quantity, 0);
+
   
   return (
     <header>
@@ -102,9 +108,12 @@ export default function Header() {
                 <></>
               )}
             </div>
-            <button onClick={toggleCart}>
-              <Icon className="text-xl" icon="icon-park-outline:shopping" />
-            </button>
+            <button onClick={toggleCart} className="relative">
+        <Icon className="text-2xl" icon="icon-park-outline:shopping" />
+        <span className="absolute top-3 -right-3 text-black font-bold text-xs rounded-full px-[6px] py-[1px]">
+          {totalItemsInCart}
+        </span>
+      </button>
           <div>
           
        {isOpen && (
