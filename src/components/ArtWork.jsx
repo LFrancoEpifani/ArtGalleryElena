@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
@@ -41,7 +42,7 @@ export default function ArtWork({ artworks }) {
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 900: 4}}>
         <Masonry>
     {filteredArtworks.map(artwork => (
-      <Link to={`/art/${artwork.id}`}>
+      <Link key={artwork.id} to={`/art/${artwork.id}`}>
         <li className="p-2" key={artwork.id}>
           <img src={artwork.image} alt={artwork.name} />
         </li>
