@@ -114,6 +114,12 @@ const handleAddToCart = () => {
           <button onClick={handleAddToCart} className='bg-black text-white  py-4 lg:py-2 lg:px-14 rounded-full 2xl:py-4 2xl:text-xl'>
               {t("purchase")}
           </button>
+<<<<<<< HEAD
+=======
+          {/* <button className='bg-white text-black border-black border py-4 lg:py-2 lg:px-14 rounded-full 2xl:py-4 2xl:text-xl'>
+          {t("makeOffer")}
+          </button> */}
+>>>>>>> 4343038b80602c03d81f307313c98a475a8dc20f
         </div>
        </div>
     </div>

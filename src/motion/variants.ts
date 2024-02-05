@@ -1,6 +1,3 @@
-
-
-
 export const animationTitle = {
   hidden: {
     y: -100,
@@ -47,8 +44,6 @@ export const animationRightImages = {
   },
 };
 
-
-
 //Variantes para mostrar palabra por palabra.
 export const container = {
   hidden: {
@@ -84,19 +79,52 @@ export const child = {
   },
 };
 
-
 //about
 
 export const scrollTextVariants = {
-  oculto: { y: 100, opacity: 0 },
-  visible1: { y: 0, opacity: 1 },
+  hidden: { y: 50, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.4,
       ease: "easeInOut",
-      delay: 1,
+    },
+  },
+};
+
+export const scrollTextVariantsXLeft = {
+  hidden: { x: -100, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+    },
+  },
+};
+
+export const scrollTextVariantsXRight = {
+  hidden: { x: 100, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+    },
+  },
+};
+
+export const scrollArrowVariant = {
+  hidden: {y: 50, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
     },
   },
 };

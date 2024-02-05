@@ -6,6 +6,7 @@ import PaintIcon from '/assets/CollectionIcon.png'
 import GalleryIcon from '/assets/GalleryIcon.jpg'
 import AboutmeIcon from '/assets/AboutMeIcon.jpg'
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Burger() {
 
@@ -14,6 +15,8 @@ export default function Burger() {
     const handleOpenMenu = () => {
         setIsOpen(!isOpen);
     }
+
+    const { t } = useTranslation('common');
     
   const location = useLocation();
   const currentPath = location.pathname;
@@ -45,9 +48,9 @@ export default function Burger() {
                   }`}
                   to={"/"}
                 >
-                    <li className='flex items-center gap-3 text-lg'>
+                    <li className='flex items-center gap-3 text-lg uppercase'>
                         <Icon className='text-2xl' icon="iconamoon:home-thin" />
-                        HOME    
+                        {t("home")}    
                     </li>
                   
                 </Link>
@@ -58,9 +61,9 @@ export default function Burger() {
                   }`}
                   to={"/collections"}
                 >
-                <li className='flex items-center gap-3 text-lg'>
+                <li className='flex items-center gap-3 text-lg uppercase'>
                     <img className='w-6' src={PaintIcon} alt="" />
-                    COLLECTIONS    
+                    {t("collections")}    
                 </li>
                </Link>
                <hr className='w-60 border-gray-400' />
@@ -69,9 +72,9 @@ export default function Burger() {
                   }`}
                   to={"/about"}
                 >
-                    <li className='flex items-center gap-3 text-lg'>
+                    <li className='flex items-center gap-3 text-lg uppercase'>
                         <img className='w-6' src={AboutmeIcon} alt="" />
-                        ABOUT ME    
+                        {t("about")}   
                     </li>
                 </Link>
                 <hr className='w-60 border-gray-400' />
