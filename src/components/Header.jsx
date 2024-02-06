@@ -4,6 +4,7 @@ import LogoElena from "/assets/LogoElenaNew.jpg";
 import Burger from "../components/Burger";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import Cart from "./Cart";
 
 export default function Header() {
   const location = useLocation();
@@ -25,6 +26,10 @@ export default function Header() {
     setIsHovered(false);
   };
 
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleCart = () => setIsOpen(!isOpen);
+  
   return (
     <header>
       <nav className="montserrat h-[8vh] flex justify-between items-center text-black px-1 border-y border-gray-400 2xl:py-8">
@@ -64,13 +69,6 @@ export default function Header() {
             <li className="text-black">{t("about")}</li>
           </Link>
 
-          <Link
-            className={`${currentPath == "/galleries" ? "bottom-rounded" : ""}`}
-            to={"/galleries"}
-          >
-            <li className="text-black">{t("galleries")}</li>
-          </Link>
-
         </ul>
         <div className="flex justify-center items-center gap-2">
           <div className="flex justify-center items-center gap-2 z-30">
@@ -104,15 +102,15 @@ export default function Header() {
                 <></>
               )}
             </div>
-            <button className="text-xl relative">
-              <Icon
-                className="text-2xl 2xl:text-4xl"
-                icon="fluent:shopping-bag-24-regular"
-              />
-              <div className="absolute top-4 right-3 bg-black rounded-full w-3 h-3 flex items-center justify-center 2xl:top-6 2xl:right-5 2xl:w-5 2xl:h-5">
-                <p className="text-white text-[8px] 2xl:text-[10px]">0</p>
-              </div>
+            <button onClick={toggleCart}>
+              <Icon className="text-xl" icon="icon-park-outline:shopping" />
             </button>
+          <div>
+          
+       {isOpen && (
+           <Cart toggleCart={toggleCart}/>
+       )}
+          </div>
           </div>
           <Burger />
         </div>

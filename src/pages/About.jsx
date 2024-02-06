@@ -12,6 +12,7 @@ import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import {
+  AnimatePresence,
   motion,
   useAnimation,
   useInView,
@@ -63,26 +64,37 @@ export default function About() {
     setScrollPosTes(latest * 4);
   });
 
-  const [testimonialsIndex, setTestimonialsIndex] = useState(1);
-  const [testimonialsLastIndex, setTestimonialsLastIndex] = useState(1);
+  const [testimonialsIndex, setTestimonialsIndex] = useState(0);
 
-  const increase = () => {
-    setTestimonialsLastIndex(testimonialsIndex);
-    if (testimonialsIndex < 2) {
-      setTestimonialsIndex(testimonialsIndex + 1);
-    } else {
-      setTestimonialsIndex(1);
-    }
+  const increaseIndex = () => {
+    setTestimonialsIndex(
+      (prevIndex) => (prevIndex + 1) % testimonialsData.length
+    );
   };
 
-  const decrease = () => {
-    setTestimonialsLastIndex(testimonialsIndex);
-    if (testimonialsIndex > 1) {
-      setTestimonialsIndex(testimonialsIndex - 1);
-    } else {
-      setTestimonialsIndex(2);
-    }
+  const decreaseIndex = () => {
+    setTestimonialsIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + testimonialsData.length) % testimonialsData.length
+    );
   };
+
+  const increaseIndexHalfArray = () => {
+    setTestimonialsIndex(
+      (prevIndex) => (prevIndex + 1) % (testimonialsData.length / 2)
+    );
+  };
+
+  const decreaseIndexHalfArray = () => {
+    setTestimonialsIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + testimonialsData.length / 2) %
+        (testimonialsData.length / 2)
+    );
+  };
+
+  const firstHalf = testimonialsData.slice(0, testimonialsData.length / 2);
+  const secondHalf = testimonialsData.slice(testimonialsData.length / 2);
 
   return (
     <>
@@ -110,7 +122,7 @@ export default function About() {
                     />
                   </div>
                   <div className="w-10/12 md:w-7/12 mx-auto md:p-6 4xl:p-12 mt-6 md:mt-0 flex flex-col items-center justify-center">
-                    <h3 className="sorts text-2xl 4xl:text-4xl text-center uppercase">
+                    <h3 className="sorts text-xl 4xl:text-4xl text-center uppercase">
                       Elena Salova
                     </h3>
                     <p className="text-center leading-5 md:leading-6 4xl:leading-8 my-4 text-[11px] 2xl:text-[14px] 4xl:text-lg text-gray-800">
@@ -161,7 +173,7 @@ export default function About() {
                   <div className="w-10/12 md:w-7/12 mx-auto md:p-6 4xl:p-12 mt-6 md:mt-0  flex flex-col items-center justify-center">
                     <h3
                       id="yoga"
-                      className="sorts text-2xl 4xl:text-4xl text-center uppercase"
+                      className="sorts text-xl 4xl:text-4xl text-center uppercase"
                     >
                       ART TEACHER & YOGA INSTRUCTOR
                     </h3>
@@ -182,17 +194,19 @@ export default function About() {
                       environment with detailed lesson plans.
                     </p>
 
-                    <a href="https://www.instagram.com/elena.art.studio.es/">
-                      <button className="flex justify-center items-center gap-1">
-                        <p className="border-b-2 border-black">
-                          Send me a message
-                        </p>
-                        <Icon
-                          className="text-xl"
-                          icon="iconamoon:arrow-top-right-1-light"
-                        />
-                      </button>
-                    </a>
+                    {!isMobile && (
+                      <a href="https://www.instagram.com/elena.art.studio.es/">
+                        <button className="flex justify-center items-center gap-1">
+                          <p className="border-b-2 border-black">
+                            Send me a message
+                          </p>
+                          <Icon
+                            className="text-xl"
+                            icon="iconamoon:arrow-top-right-1-light"
+                          />
+                        </button>
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -215,7 +229,7 @@ export default function About() {
                   <div className="w-10/12 md:w-7/12 mx-auto md:p-6 4xl:p-12 mt-6 md:mt-0 flex flex-col items-center justify-center">
                     <h3
                       id="yoga"
-                      className="sorts text-2xl 4xl:text-4xl text-center uppercase"
+                      className="sorts text-xl 4xl:text-4xl text-center uppercase"
                     >
                       BIOGRAPHY
                     </h3>
@@ -260,184 +274,111 @@ export default function About() {
         </div>
       </section>
       {!isMobile ? (
-        <section ref={testimonialsRef} className=" relative z-20 h-[200vh]">
-          <div className=" sticky h-[100vh] top-0">
-            <>
-              {" "}
-              <div className="absolute top-[15vh] 2xl:top-[20vh] 4xl:top-[25vh] left-0 w-full flex justify-between  z-40 overflow-hidden px-10 2xl:px-20">
-                <motion.div
-                  initial="visible"
-                  animate={
-                    scrollPosTes >= 0 &&
-                    scrollPosTes <= scrollTotalTes / 2 - 0.5
-                      ? "visible"
-                      : "hidden"
-                  }
-                  variants={scrollTextVariantsXLeft}
-                  className=" w-full md:w-[35vw] text-center"
-                >
-                  <h3 className="text-xl font-bold my-4">Inesa Kochur</h3>
-                  <p className="w-full px-4 leading-8">
-                    “The artwork “Open” represents a traditional doorknob in the
-                    form of a hand which one can spot on the entrances of
-                    ancient buildings in Seville. The color palette of gold and
-                    black gives a touch of royalty and aristocracy. “
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  initial="visible"
-                  animate={
-                    scrollPosTes >= 0 &&
-                    scrollPosTes <= scrollTotalTes / 2 - 0.5
-                      ? "visible"
-                      : "hidden"
-                  }
-                  variants={scrollArrowVariant}
-                  className=" text-3xl w-[20vw] flex items-center justify-center gap-6"
-                >
-                  <button>
-                    {" "}
-                    <Icon icon="ph:arrow-down" />{" "}
-                  </button>
-                </motion.div>
-
-                <motion.div
-                  initial="visible"
-                  animate={
-                    scrollPosTes >= 0 &&
-                    scrollPosTes <= scrollTotalTes / 2 - 0.5
-                      ? "visible"
-                      : "hidden"
-                  }
-                  variants={scrollTextVariantsXRight}
-                  className=" w-full md:w-[35vw] text-center"
-                >
-                  <h3 className="text-xl font-bold my-4">
-                    Miguel Valdayo Boza
-                  </h3>
-                  <p className="w-full px-4 leading-8 ">
-                    “This work, made by the painter Elena, presents us with a
-                    painting full of meaning and with multiple readings, all of
-                    them interconnected in a general whole that tells us about
-                    the cultural heritage that we enjoy in Andalusia and
-                    wonderfully resolved in a format in which each and every one
-                    of the elements that define the work is easily
-                    identifiable.”{" "}
-                  </p>
-                </motion.div>
-              </div>
-              <div className="absolute top-[15vh] 2xl:top-[20vh] 4xl:top-[25vh] left-0 w-full flex justify-between z-40 overflow-hidden px-10 2xl:px-20">
-                <motion.div
-                  initial="hidden"
-                  animate={
-                    scrollPosTes > scrollTotalTes / 2 - 0.5 &&
-                    scrollPosTes <= 2 * (scrollTotalTes / 2)
-                      ? "visible"
-                      : "hidden"
-                  }
-                  variants={scrollTextVariantsXLeft}
-                  className=" w-full md:w-[35vw] text-center"
-                >
-                  <h3 className="text-xl font-bold my-4">
-                    Cambio Primer Testimonials
-                  </h3>
-                  <p className="w-full px-4 leading-8">
-                    “The artwork “Open” represents a traditional doorknob in the
-                    form of a hand which one can spot on the entrances of
-                    ancient buildings in Seville. The color palette of gold and
-                    black gives a touch of royalty and aristocracy. “
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  initial="hidden"
-                  animate={
-                    scrollPosTes > scrollTotalTes / 2 - 0.5 &&
-                    scrollPosTes <= 2 * (scrollTotalTes / 2)
-                      ? "visible"
-                      : "hidden"
-                  }
-                  variants={scrollArrowVariant}
-                  className=" text-3xl w-[20vw] flex items-center justify-center gap-6"
-                >
-                  <button>
-                    {" "}
-                    <Icon icon="ph:arrow-up" />{" "}
-                  </button>
-                </motion.div>
-
-                <motion.div
-                  initial="hidden"
-                  animate={
-                    scrollPosTes > scrollTotalTes / 2 - 0.5 &&
-                    scrollPosTes <= 2 * (scrollTotalTes / 2)
-                      ? "visible"
-                      : "hidden"
-                  }
-                  variants={scrollTextVariantsXRight}
-                  className=" w-full md:w-[35vw] text-center"
-                >
-                  <h3 className="text-xl font-bold my-4">
-                    Cambio Segundo Testimonials
-                  </h3>
-                  <p className="w-full px-4 leading-8 ">
-                    “This work, made by the painter Elena, presents us with a
-                    painting full of meaning and with multiple readings, all of
-                    them interconnected in a general whole that tells us about
-                    the cultural heritage that we enjoy in Andalusia and
-                    wonderfully resolved in a format in which each and every one
-                    of the elements that define the work is easily
-                    identifiable.”{" "}
-                  </p>
-                </motion.div>
-              </div>{" "}
-            </>
-
-            {/* <img
-            className="absolute bottom-0 w-full h-[40vh]"
-            src={ImageGroup}
-            alt="photoGr"
-          /> */}
+        <section className="relative h-[60vh] 4xl:h-[50vh] overflow-hidden">
+            <div className="absolute z-20 h-full w-full  text-3xl mt-10  flex items-center justify-center gap-6">
+            <button
+              onClick={decreaseIndexHalfArray}
+              className="rounded-full border-2 border-black cursor-pointer"
+            >
+              <Icon icon="ph:arrow-left" />
+            </button>
+            <button
+              onClick={increaseIndexHalfArray}
+              className="rounded-full border-2 border-black cursor-pointer"
+            >
+              <Icon icon="ph:arrow-right" />
+            </button>
           </div>
+          <div
+            className={`absolute h-full flex  items-center justify-between gap-80 px-20  transition-all duration-1000 transform ${
+              testimonialsIndex === 0
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-full"
+            } `}
+          >
+          
+            {firstHalf.map((testimonial, index) => (
+              <div
+                key={testimonial.id}
+                className={`w-full flex justify-center items-center`}
+              >
+                <div className="text-center">
+                  <h3 className="text-xl font-bold my-4">
+                    {testimonial.title}
+                  </h3>
+                  <p className="w-full px-4 leading-6 text-sm">
+                    {testimonial.text}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          
+         
+          <div
+            className={`absolute h-full flex  items-center justify-between gap-80 px-20  transition-all duration-1000 transform ${
+              testimonialsIndex === 1
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-full"
+            } `}
+          >
+          
+            {secondHalf.map((testimonial, index) => (
+              <div
+                key={testimonial.id}
+                className={`w-full flex justify-center items-center`}
+              >
+                <div className="text-center">
+                  <h3 className="text-xl font-bold my-4">
+                    {testimonial.title}
+                  </h3>
+                  <p className="w-full px-4 leading-6 text-sm">
+                    {testimonial.text}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+         
         </section>
       ) : (
-      
-        <section className="relative h-[60vh]">
+        <section className="relative h-[80vh] overflow-hidden">
+          <img
+            src={CollageFull}
+            loading="lazy"
+            className="h-[20vh] w-full rounded-[8px] object-cover"
+          />
+
           {testimonialsData.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className={`${
-                testimonialsIndex === index + 1 ? "block" : "hidden"
+              className={`absolute flex justify-center items-center mt-20 inset-0 transition-all duration-500 transform ${
+                testimonialsIndex === index
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-full"
               } w-full px-8`}
             >
-              <motion.div
-                initial={testimonialsIndex === index + 1 ? "visible" : "hidden"}
-                animate={testimonialsIndex === index + 1 ? "visible" : "hidden"}
-                variants={testimonialsLastIndex > testimonialsIndex ? scrollTextVariantsXLeft : scrollTextVariantsXRight }
-                className=" w-full text-center"
-              >
+              <div className="text-center">
                 <h3 className="text-xl font-bold my-4">{testimonial.title}</h3>
                 <p className="w-full px-4 leading-6 text-sm">
                   {testimonial.text}
                 </p>
-              </motion.div>
+              </div>
             </div>
           ))}
-          <div className="absolute bottom-20 text-3xl mt-10 w-full flex items-center justify-center gap-6">
+          <div className="absolute bottom-0 text-3xl mt-10 w-full flex items-center justify-center gap-6">
             <button
-              onClick={decrease}
+              onClick={decreaseIndex}
               className="rounded-full border-2 border-black"
             >
-              {" "}
-              <Icon icon="ph:arrow-left" />{" "}
+              <Icon icon="ph:arrow-left" />
             </button>
             <button
-              onClick={increase}
+              onClick={increaseIndex}
               className="rounded-full border-2 border-black"
             >
-              {" "}
-              <Icon icon="ph:arrow-right" />{" "}
+              <Icon icon="ph:arrow-right" />
             </button>
           </div>
         </section>
