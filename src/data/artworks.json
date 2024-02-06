@@ -6,7 +6,6 @@
       "price": "950",
       "size": "Oil on canvas - Acrylic. 60x70cm",
       "image": "/assets/Gate.jpg",
-      "room": "/assets/RoomGate.jpg",
       "category": "Acrylic"
     },
     {
@@ -16,7 +15,7 @@
       "price": "750",
       "size": "Oil on canvas - Acrylic. 40x50cm",
       "image": "/assets/drop.jpg",
-      "room": "/assets/RoomDrop.jpg",
+    
       "category": "Acrylic"
     },
     {
@@ -26,7 +25,7 @@
       "price": "750",
       "size": "Oil on canvas - Acrylic. 40x50cm",
       "image": "/assets/Hand.jpg",
-      "room": "/assets/RoomHope.jpg",
+      
       "category": "Acrylic"
     },
     {
@@ -37,7 +36,7 @@
       "size": "Oil on canvas - Mixed technique. 120x80cm",
       "image": "/assets/Sevillana.jpg",
       "house": "/assets/HouseFlamenco.jpg",
-      "room": "/assets/RoomFlamenco.jpg",
+      
       "category": "Mixed technique"
     },
   
@@ -49,7 +48,7 @@
       "size": "Oil on canvas - Mixed technique. 60x80cm ",
       "image": "/assets/AdanEva.jpg",
       "house": "/assets/HouseAdanEva.jpg",
-      "room": "/assets/RoomAdanEva.jpg",
+  
       "category": "Mixed technique"
     },
     {
@@ -59,7 +58,7 @@
       "price": "550",
       "size": "Acrylic. 40 x 50 cm",
       "image": "/assets/Horse.jpg",
-      "room": "/assets/RoomHorse.jpg",
+     
       "category": "Acrylic"
     },
     {
@@ -69,7 +68,7 @@
       "price": "3600",
       "size": "Oil on canvas - Mixed technique. 140x90cm",
       "image": "/assets/David.jpg",
-      "room": "/assets/RoomDavid.jpg",
+    
       "category": "Mixed technique"
     },
     {
@@ -79,7 +78,7 @@
       "price": "5000",
       "size": "Oil on canvas - Mixed technique. 140x115cm",
       "image": "/assets/Culture.jpg",
-      "room": "/assets/RoomCulture.jpg",
+     
       "category": "Mixed technique"
     },
     {
@@ -89,7 +88,7 @@
       "price": "2000",
       "size": "Oil on canvas - Mixed technique. 178x76cm",
       "image": "/assets/Disturbed.jpg",
-      "room": "/assets/RoomDisturbed.jpg",
+  
       "category": "Mixed technique"
     },
     {
@@ -99,7 +98,7 @@
       "price": "2200",
       "size": "Oil on canvas - Mixed technique. 178x76cm",
       "image": "/assets/Deep.jpg",
-      "room": "/assets/RoomDeep.jpg",
+     
       "category": "Mixed technique"
     },
     {
@@ -109,7 +108,7 @@
       "price": "1200",
       "size": "Oil on canvas - Acrylic 120x80cm",
       "image": "/assets/Moment.jpg",
-      "room": "/assets/RoomMoment.jpg",
+      
       "category": "Acrylic"
     },
     {
@@ -119,17 +118,53 @@
       "price": "2500",
       "size": "Oil on canvas - Mixed technique  178x76cm",
       "image": "/assets/Depression.jpg",
-      "room": "/assets/RoomDepression.jpg",
+     
       "category": "Mixed technique"
     },
     {
       "id": "13",
       "name": "One million quartet",
       "description": "The cool musicians",
-      "price": "2500",
+      "price": "2100",
       "size": "Oil on canvas - Mixed technique  178x76cm",
       "image": "/assets/Cool.jpg",
-      "room": "/assets/RoomCool.jpg",
+     
+      "category": "Mixed technique"
+    },
+    {
+      "id": "14",
+      "name": "Buda",
+      "description": "Rest in peace",
+      "price": "2700",
+      "size": "Oil on canvas - Mixed technique  125x70cm",
+      "image": "/assets/Buda.jpg",
+      "category": "Mixed technique"
+    },
+    {
+      "id": "15",
+      "name": "Torero",
+      "description": "Torero Sevillano",
+      "price": "1800",
+      "size": "Oil on canvas - Mixed technique  115x70cm",
+      "image": "/assets/Torero.jpg",
+      "category": "Mixed technique"
+    },
+    {
+      "id": "16",
+      "name": "Torero Mandalero",
+      "description": "Torero & Mandala",
+      "price": "1950",
+      "size": "Oil on canvas - Mixed technique  85x85cm",
+      "image": "/assets/ToreroMandala.jpg",
+      "category": "Mixed technique"
+    },
+    {
+      "id": "17",
+      "name": "Red Caos",
+      "description": "Circle of caos",
+      "price": "1400",
+      "size": "Oil on canvas - Mixed technique  140x90cm",
+      "image": "/assets/Circle.jpg",
       "category": "Mixed technique"
     }
    
