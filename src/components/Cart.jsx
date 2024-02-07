@@ -1,12 +1,38 @@
-
-import { useCart } from '../CartContext';
+/* eslint-disable react/prop-types */
+import { useCart } from '../context/CartContext';
 import { Icon } from '@iconify/react';
 import React, { useState } from 'react';
+import { loadStripe } from '@stripe/stripe-js';
 
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_API_KEY);
 
 export default function Cart({ toggleCart }) {
 
 const { items, clearCart } = useCart();
+
+console.log(items)
+
+const lineItems = items.map(item => ({
+  price: item.price_id, 
+  quantity: item.quantity 
+}));
+
+const handleCheckout = async (event) => {
+  event.preventDefault();
+  const stripe = await stripePromise;
+
+  const { error } = await stripe.redirectToCheckout({
+    lineItems: lineItems,
+    mode: 'payment',
+    successUrl: window.location.origin + '/success',
+    cancelUrl: window.location.origin + '/cancel',
+  });
+
+  if (error) {
+    console.error('Error:', error);
+  }
+};
+
 
 return (
 
@@ -33,7 +59,7 @@ return (
       </div>
     
         <div className='flex justify-between items-center'>
-        <button className="mt-4 bg-green-500 hover:bg-green-700 text-white text-sm py-2 px-3 rounded focus:outline-none focus:shadow-outline">
+        <button  onClick={handleCheckout} className="mt-4 bg-green-500 hover:bg-green-700 text-white text-sm py-2 px-3 rounded focus:outline-none focus:shadow-outline">
            Purchase
         </button>
       

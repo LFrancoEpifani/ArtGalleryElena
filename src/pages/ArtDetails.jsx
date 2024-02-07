@@ -4,7 +4,7 @@ import artworks from '../data/artworks.json'
 import { Icon } from '@iconify/react';
 import Header from '../components/Header';
 import { useTranslation } from 'react-i18next';
-import { useCart } from '../CartContext'; 
+import { useCart } from '../context/CartContext'; 
 
 export default function ArtDetails() {
 
@@ -64,11 +64,12 @@ export default function ArtDetails() {
 
 const handleAddToCart = () => {
   const itemToAdd = {
-    id: art.id, // Asegúrate de que art tiene un id único
+    id: art.id, 
     name: art.name,
     price: art.price,
     image: selectedImage,
-    quantity: 1, // Este valor se ajustará automáticamente si el item ya está en el carrito
+    quantity: 1,
+    price_id: art.price_id 
   };
   addToCart(itemToAdd);
 };
