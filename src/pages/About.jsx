@@ -280,13 +280,7 @@ export default function About() {
               onClick={decreaseIndexHalfArray}
               className="rounded-full border-2 border-black cursor-pointer"
             >
-              <Icon icon="ph:arrow-left" />
-            </button>
-            <button
-              onClick={increaseIndexHalfArray}
-              className="rounded-full border-2 border-black cursor-pointer"
-            >
-              <Icon icon="ph:arrow-right" />
+              <Icon icon="ph:arrow-down" />
             </button>
           </div>
           <div
