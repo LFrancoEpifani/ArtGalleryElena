@@ -121,11 +121,11 @@ export default function About() {
                       alt=""
                     />
                   </div>
-                  <div className="w-10/12 md:w-7/12 mx-auto md:p-6 4xl:p-12 mt-6 md:mt-0 flex flex-col items-center justify-center">
+                  <div className="w-10/12 md:w-7/12 mx-auto md:p-7 2xl:p-6 4xl:p-12 mt-6 md:mt-0 flex flex-col items-center justify-center">
                     <h3 className="sorts text-xl 4xl:text-4xl text-center uppercase">
                       Elena Salova
                     </h3>
-                    <p className="text-center leading-5 md:leading-6 4xl:leading-8 my-4 text-[11px] 2xl:text-[14px] 4xl:text-lg text-gray-800">
+                    <p className="text-center leading-5 md:leading-6 4xl:leading-9 my-4 text-[11px] md:text-[13px] 2xl:text-[14px] 4xl:text-[20px] text-gray-800 4xl:text-opacity-90">
                       Elena&apos;s artistic journey blossomed amidst the
                       picturesque landscapes of Novopskov in Ukraine&apos;s
                       Luhansk region. Her earliest strokes foretold a lifetime
@@ -170,14 +170,14 @@ export default function About() {
                       alt=""
                     />
                   </div>
-                  <div className="w-10/12 md:w-7/12 mx-auto md:p-6 4xl:p-12 mt-6 md:mt-0  flex flex-col items-center justify-center">
+                  <div className="w-10/12 md:w-7/12 mx-auto md:p-7 2xl:p-6 4xl:p-12 mt-6 md:mt-0  flex flex-col items-center justify-center">
                     <h3
                       id="yoga"
                       className="sorts text-xl 4xl:text-4xl text-center uppercase"
                     >
                       ART TEACHER & YOGA INSTRUCTOR
                     </h3>
-                    <p className="text-center leading-5 md:leading-6 4xl:leading-8 my-4 text-[11px] 2xl:text-[14px] 4xl:text-lg text-gray-800">
+                    <p className="text-center leading-5 md:leading-6 4xl:leading-9 my-4 text-[11px] md:text-[13px] 2xl:text-[14px] 4xl:text-[20px] text-gray-800 4xl:text-opacity-90">
                       Elena, an experienced creative art teacher, brings 8 years
                       of expertise to her role, focusing on instructing students
                       in drawing, painting, sculpture, yoga, and meditation. She
@@ -196,7 +196,7 @@ export default function About() {
 
                     {!isMobile && (
                       <a href="https://www.instagram.com/elena.art.studio.es/">
-                        <button className="flex justify-center items-center gap-1">
+                        <button className="flex justify-center items-center gap-1 4xl:text-xl">
                           <p className="border-b-2 border-black">
                             Send me a message
                           </p>
@@ -226,14 +226,14 @@ export default function About() {
                       alt=""
                     />
                   </div>
-                  <div className="w-10/12 md:w-7/12 mx-auto md:p-6 4xl:p-12 mt-6 md:mt-0 flex flex-col items-center justify-center">
+                  <div className="w-10/12 md:w-7/12 mx-auto md:p-7 2xl:p-6 4xl:p-12 mt-6 md:mt-0 flex flex-col items-center justify-center">
                     <h3
                       id="yoga"
                       className="sorts text-xl 4xl:text-4xl text-center uppercase"
                     >
                       BIOGRAPHY
                     </h3>
-                    <p className="text-center leading-5 md:leading-6 4xl:leading-8 my-4 text-[11px] 2xl:text-[14px] 4xl:text-lg text-gray-800">
+                    <p className="text-center leading-5 md:leading-6 4xl:leading-9 my-4 text-[11px]  md:text-[13px] 2xl:text-[14px] 4xl:text-[20px] text-gray-800 4xl:text-opacity-90">
                       Elena, a Ukrainian artist from Novopskov, excelled in
                       various painting techniques and studied at Kyiv&apos;s
                       &quot;Oberig&quot; art courses, Odessa State Art College,
@@ -247,7 +247,7 @@ export default function About() {
                       &quot;Lavra&quot;. Since 2013, Elena has been imparting
                       her knowledge as a painting and drawing teacher.
                     </p>
-                    <button className="flex justify-center items-center gap-1">
+                    <button className="flex justify-center items-center gap-1 4xl:text-xl">
                       <p className="border-b-2 border-black">Work with me</p>
                       <Icon
                         className="text-xl"
@@ -275,7 +275,7 @@ export default function About() {
       </section>
       {!isMobile ? (
         <section className="relative h-[60vh] 4xl:h-[50vh] overflow-hidden">
-            <div className="absolute z-20 h-full w-full  text-3xl mt-10  flex items-center justify-center gap-6">
+          <div className="absolute z-20 h-full w-full  text-3xl mt-10  flex items-center justify-center gap-6">
             <button
               onClick={decreaseIndexHalfArray}
               className="rounded-full border-2 border-black cursor-pointer"
@@ -290,26 +290,16 @@ export default function About() {
                 : "opacity-0 translate-y-full"
             } `}
           >
-          
             {firstHalf.map((testimonial, index) => (
-              <div
-                key={testimonial.id}
-                className={`w-full flex justify-center items-center`}
-              >
-                <div className="text-center">
-                  <h3 className="text-xl font-bold my-4">
-                    {testimonial.title}
-                  </h3>
-                  <p className="w-full px-4 leading-6 text-sm">
-                    {testimonial.text}
-                  </p>
-                </div>
+              <div key={testimonial.id} className="w-full text-center h-[20vh]">
+                <h3 className="text-xl 4xl:text-4xl font-bold my-4 4xl:my-10">{testimonial.title}</h3>
+                <p className="w-full px-4 leading-6 text-sm 4xl:text-xl">
+                  {testimonial.text}
+                </p>
               </div>
             ))}
           </div>
 
-          
-         
           <div
             className={`absolute h-full flex  items-center justify-between gap-80 px-20  transition-all duration-1000 transform ${
               testimonialsIndex === 1
@@ -317,24 +307,15 @@ export default function About() {
                 : "opacity-0 translate-y-full"
             } `}
           >
-          
             {secondHalf.map((testimonial, index) => (
-              <div
-                key={testimonial.id}
-                className={`w-full flex justify-center items-center`}
-              >
-                <div className="text-center">
-                  <h3 className="text-xl font-bold my-4">
-                    {testimonial.title}
-                  </h3>
-                  <p className="w-full px-4 leading-6 text-sm">
-                    {testimonial.text}
-                  </p>
-                </div>
+              <div key={testimonial.id} className="w-full text-center h-[20vh]">
+                <h3 className="text-xl 4xl:text-4xl font-bold my-4 4xl:my-10">{testimonial.title}</h3>
+                <p className="w-full px-4 leading-6 text-sm 4xl:text-xl">
+                  {testimonial.text}
+                </p>
               </div>
             ))}
           </div>
-         
         </section>
       ) : (
         <section className="relative h-[80vh] overflow-hidden">
