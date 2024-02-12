@@ -164,13 +164,18 @@
     },
     {
       "id": "17",
-      "name": "Red Caos",
-      "description": "Circle of caos",
-      "price": "1400",
+      "name": "The Queen",
+      "description": "Kiss of the Queen",
+      "price": "3600",
       "size": "Oil on canvas - Mixed technique  140x90cm",
+<<<<<<< HEAD
+      "image": "/assets/BigPaint.png",
+      "category": "Mixed technique"
+=======
       "image": "/assets/Circle.jpg",
       "category": "Mixed technique",
       "price_id": "price_1Oh8hzCeJP4hPlFysGN44A1L"
+>>>>>>> 722cf65c826dec445dde41b84a30f4d6e3463bdc
     }
    
   ]
