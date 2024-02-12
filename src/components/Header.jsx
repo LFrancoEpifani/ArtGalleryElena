@@ -5,7 +5,8 @@ import Burger from "../components/Burger";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import Cart from "./Cart";
-import { useCart } from '../CartContext';
+import { useCart } from '../context/CartContext';
+import { getLanguage, setLanguage } from "../utils/language";
 
 export default function Header() {
   const location = useLocation();
@@ -13,7 +14,9 @@ export default function Header() {
 
   const { t, i18n } = useTranslation('common');
   const currentLanguage = i18n.language;
+
   const changeLanguage = (language) => {
+    setLanguage(language);
     i18n.changeLanguage(language);
   };
 

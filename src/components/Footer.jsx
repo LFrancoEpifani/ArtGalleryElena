@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react'
 export default function Footer() {
   return (
     <div>
-        <div className='flex  justify-between  items-end mt-8 pr-2 md:pb-2'>
+        <div className='h-[20vh] flex  justify-between  items-end md:mt-8 pr-2 md:pb-2'>
             <img className='w-28 object-cover' src={ElenaSign} alt="" />
             <p className='hidden md:block'>All rights reserved © Luciano & Lautaro Epifani 2024.</p>
             <div className='flex items-center gap-2 text-xl'>

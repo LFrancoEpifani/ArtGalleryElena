@@ -6,7 +6,8 @@
       "price": "950",
       "size": "Oil on canvas - Acrylic. 60x70cm",
       "image": "/assets/Gate.jpg",
-      "category": "Acrylic"
+      "category": "Acrylic",
+      "price_id": "price_1Oh8AVCeJP4hPlFyTBKpTzyb"
     },
     {
       "id": "2",
@@ -15,8 +16,8 @@
       "price": "750",
       "size": "Oil on canvas - Acrylic. 40x50cm",
       "image": "/assets/drop.jpg",
-    
-      "category": "Acrylic"
+      "category": "Acrylic",
+      "price_id": "price_1Oh8CeCeJP4hPlFyLpChW2dg"
     },
     {
       "id": "3",
@@ -25,8 +26,8 @@
       "price": "750",
       "size": "Oil on canvas - Acrylic. 40x50cm",
       "image": "/assets/Hand.jpg",
-      
-      "category": "Acrylic"
+      "category": "Acrylic",
+      "price_id": "price_1Oh8LoCeJP4hPlFymlOSKuoB"
     },
     {
       "id": "4",
@@ -36,8 +37,8 @@
       "size": "Oil on canvas - Mixed technique. 120x80cm",
       "image": "/assets/Sevillana.jpg",
       "house": "/assets/HouseFlamenco.jpg",
-      
-      "category": "Mixed technique"
+      "category": "Mixed technique",
+      "price_id": "price_1Oh8MSCeJP4hPlFy4l167YkQ"
     },
   
     {
@@ -48,8 +49,8 @@
       "size": "Oil on canvas - Mixed technique. 60x80cm ",
       "image": "/assets/AdanEva.jpg",
       "house": "/assets/HouseAdanEva.jpg",
-  
-      "category": "Mixed technique"
+      "category": "Mixed technique",
+      "price_id": "price_1Oh891CeJP4hPlFytryxSiNl"
     },
     {
       "id": "6",
@@ -58,8 +59,8 @@
       "price": "550",
       "size": "Acrylic. 40 x 50 cm",
       "image": "/assets/Horse.jpg",
-     
-      "category": "Acrylic"
+      "category": "Acrylic",
+      "price_id": "price_1Oh8N8CeJP4hPlFyuLL5UXhC"
     },
     {
       "id": "7",
@@ -68,8 +69,8 @@
       "price": "3600",
       "size": "Oil on canvas - Mixed technique. 140x90cm",
       "image": "/assets/David.jpg",
-    
-      "category": "Mixed technique"
+      "category": "Mixed technique",
+      "price_id": "price_1Oh8PjCeJP4hPlFyDZhrX20K"
     },
     {
       "id": "8",
@@ -78,8 +79,8 @@
       "price": "5000",
       "size": "Oil on canvas - Mixed technique. 140x115cm",
       "image": "/assets/Culture.jpg",
-     
-      "category": "Mixed technique"
+      "category": "Mixed technique",
+      "price_id": "price_1Oh8RYCeJP4hPlFydIVykyJ7"
     },
     {
       "id": "9",
@@ -88,8 +89,8 @@
       "price": "2000",
       "size": "Oil on canvas - Mixed technique. 178x76cm",
       "image": "/assets/Disturbed.jpg",
-  
-      "category": "Mixed technique"
+      "category": "Mixed technique",
+      "price_id": "price_1Oh8StCeJP4hPlFyebJdTqIi"
     },
     {
       "id": "10",
@@ -98,8 +99,8 @@
       "price": "2200",
       "size": "Oil on canvas - Mixed technique. 178x76cm",
       "image": "/assets/Deep.jpg",
-     
-      "category": "Mixed technique"
+      "category": "Mixed technique",
+      "price_id": "price_1Oh8TgCeJP4hPlFyN5gUhrfU"
     },
     {
       "id": "11",
@@ -108,8 +109,8 @@
       "price": "1200",
       "size": "Oil on canvas - Acrylic 120x80cm",
       "image": "/assets/Moment.jpg",
-      
-      "category": "Acrylic"
+      "category": "Acrylic",
+      "price_id": "price_1Oh8aVCeJP4hPlFyY5cKFDhi"
     },
     {
       "id": "12",
@@ -118,8 +119,8 @@
       "price": "2500",
       "size": "Oil on canvas - Mixed technique  178x76cm",
       "image": "/assets/Depression.jpg",
-     
-      "category": "Mixed technique"
+      "category": "Mixed technique",
+      "price_id": "price_1Oh8cbCeJP4hPlFyPZjPfSW0"
     },
     {
       "id": "13",
@@ -128,8 +129,8 @@
       "price": "2100",
       "size": "Oil on canvas - Mixed technique  178x76cm",
       "image": "/assets/Cool.jpg",
-     
-      "category": "Mixed technique"
+      "category": "Mixed technique",
+      "price_id": "price_1Oh8e1CeJP4hPlFy4o21xINH"
     },
     {
       "id": "14",
@@ -138,7 +139,8 @@
       "price": "2700",
       "size": "Oil on canvas - Mixed technique  125x70cm",
       "image": "/assets/Buda.jpg",
-      "category": "Mixed technique"
+      "category": "Mixed technique",
+      "price_id": "price_1Oh8fKCeJP4hPlFyFOBptze5"
     },
     {
       "id": "15",
@@ -147,7 +149,8 @@
       "price": "1800",
       "size": "Oil on canvas - Mixed technique  115x70cm",
       "image": "/assets/Torero.jpg",
-      "category": "Mixed technique"
+      "category": "Mixed technique",
+      "price_id": "price_1Oh8g6CeJP4hPlFyctACh17E"
     },
     {
       "id": "16",
@@ -156,7 +159,8 @@
       "price": "1950",
       "size": "Oil on canvas - Mixed technique  85x85cm",
       "image": "/assets/ToreroMandala.jpg",
-      "category": "Mixed technique"
+      "category": "Mixed technique",
+      "price_id": "price_1Oh8h7CeJP4hPlFyjUCkOSuF"
     },
     {
       "id": "17",
@@ -164,8 +168,14 @@
       "description": "Kiss of the Queen",
       "price": "3600",
       "size": "Oil on canvas - Mixed technique  140x90cm",
+<<<<<<< HEAD
       "image": "/assets/BigPaint.png",
       "category": "Mixed technique"
+=======
+      "image": "/assets/Circle.jpg",
+      "category": "Mixed technique",
+      "price_id": "price_1Oh8hzCeJP4hPlFysGN44A1L"
+>>>>>>> 722cf65c826dec445dde41b84a30f4d6e3463bdc
     }
    
   ]
