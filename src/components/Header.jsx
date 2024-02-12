@@ -83,11 +83,11 @@ export default function Header() {
           </Link>
         </ul>
 
-        <div className="relative h-[5vh] flex justify-end items-center gap-1 z-30 2xl:w-32">
+        <div className="relative h-10 flex justify-end items-center gap-1 z-30 2xl:w-32">
           <div
             onMouseEnter={handleHoverEnter}
             onMouseLeave={handleHoverLeave}
-            className="hidden sm:flex absolute right-16 gap-1 h-[5vh]"
+            className="hidden sm:flex absolute right-16 gap-1 h-10"
           >
             {currentLanguage === "es" ? (
               <button
@@ -147,11 +147,11 @@ export default function Header() {
 
           <button
             onClick={toggleCart}
-            className="relative border border-black pl-1 pr-4 py-1 md:py-0  md:h-[5vh] rounded"
+            className="relative border border-black pl-1 pr-4 py-[1px] md:py-0  md:h-10 rounded"
           >
             <img className="w-8" src={"/assets/header/cart.png"} alt="cart" />
             {/* <Icon className="text-2xl" icon="icon-park-outline:shopping" /> */}
-            <span className="absolute top-5 md:top-4 right-1 font-bold text-[9px] md:text-[10px] rounded-full border border-black px-[4px]">
+            <span className=" absolute top-4 md:top-5 right-[1px] font-bold text-[9px] md:text-[10px] rounded-full border border-black px-[4px]">
               {totalItemsInCart}
             </span>
           </button>

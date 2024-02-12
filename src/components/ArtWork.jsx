@@ -27,33 +27,10 @@ export default function ArtWork({ artworks }) {
   const filteredArtworks = filterArtworks(artworks);
 
   return (
-<<<<<<< HEAD
-   <div>
-     <div className="flex justify-end items-end gap-6 mt-8 mb-4">
-          <Filter setFilters={setFilters} />
-      <Category setFilters={setFilters} />
-          </div>
-      <div className="w-full p-4 montserrat">          
-       <ul className="">
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 900: 4}}>
-        <Masonry>
-    {filteredArtworks.map(artwork => (
-      <Link key={artwork.id} to={`/art/${artwork.id}`}>
-        <li className="p-2">
-          <img  src={artwork.image} alt={artwork.name} loading="lazy"/>
-        </li>
-      </Link>
-    ))}
-  </Masonry>
-        </ResponsiveMasonry>
-       </ul>
-
-=======
     <div>
       <div className="flex justify-end items-end gap-6 mt-8 mb-4">
         <Filter setFilters={setFilters} />
         <Category setFilters={setFilters} />
->>>>>>> 722cf65c826dec445dde41b84a30f4d6e3463bdc
       </div>
       <div className="w-full p-4 montserrat">
         <ul className="">
