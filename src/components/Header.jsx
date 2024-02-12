@@ -5,14 +5,14 @@ import Burger from "../components/Burger";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import Cart from "./Cart";
-import { useCart } from '../context/CartContext';
+import { useCart } from "../context/CartContext";
 import { getLanguage, setLanguage } from "../utils/language";
 
 export default function Header() {
   const location = useLocation();
   const currentPath = location.pathname;
 
-  const { t, i18n } = useTranslation('common');
+  const { t, i18n } = useTranslation("common");
   const currentLanguage = i18n.language;
 
   const changeLanguage = (language) => {
@@ -30,26 +30,30 @@ export default function Header() {
     setIsHovered(false);
   };
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleCart = () => setIsOpen(!isOpen);
 
   const { items } = useCart();
 
-  const totalItemsInCart = items.reduce((total, item) => total + item.quantity, 0);
+  const totalItemsInCart = items.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
-  
   return (
     <header>
-      <nav className="montserrat h-[8vh] flex justify-between items-center text-black px-1 border-y border-gray-400 2xl:py-8">
+      <nav className="montserrat h-[8vh] flex justify-between items-center text-black px-2 border-y border-gray-400 2xl:py-2 2xl:px-4">
         <Link to={"/"}>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center  w-32 h-full">
             <img
-              className="w-11 h-full object-contain 2xl:w-16"
+              className="w-10 md:w-12 h-full  object-contain"
               src={LogoElena}
               alt=""
             />
-            <p className="font-bold font-cormorant 2xl:text-[22px]">ELENA</p>
+            <p className="w-20 font-bold font-cormorant text-xl md:text-[22px]">
+              ELENA
+            </p>
           </div>
         </Link>
         <ul className="hidden md:flex items-center justify-center gap-8 font-semibold text-[14px] 2xl:text-[18px]">
@@ -77,53 +81,81 @@ export default function Header() {
           >
             <li className="text-black">{t("about")}</li>
           </Link>
-
         </ul>
-        <div className="flex justify-center items-center gap-2">
-          <div className="flex justify-center items-center gap-2 z-30">
-            <div
-              onMouseEnter={handleHoverEnter}
-              onMouseLeave={handleHoverLeave}
-              className="relative"
-            >
-              <button className="flex items-start md:items-center font-bold text-xs md:text-sm">
-                <span className="uppercase">{currentLanguage}</span>
-                <Icon icon="ep:arrow-down-bold" />
+
+        <div className="relative h-[5vh] flex justify-end items-center gap-1 z-30 2xl:w-32">
+          <div
+            onMouseEnter={handleHoverEnter}
+            onMouseLeave={handleHoverLeave}
+            className="hidden sm:flex absolute right-16 gap-1 h-[5vh]"
+          >
+            {currentLanguage === "es" ? (
+              <button
+                onClick={() => changeLanguage("es")}
+                className="w-24 flex items-center justify-center gap-1 font-bold text-xs md:text-sm py-2 border border-black  px-4 rounded bg-white hover:bg-black hover:text-white"
+              >
+                <span>{t("languageEs")}</span>{" "}
+                <img
+                  className="w-4"
+                  src="/assets/header/spain.svg"
+                  alt="united"
+                />{" "}
               </button>
-              {isHovered ? (
-                <div className="absolute w-22 flex flex-col right-0">
-                  <button
-                    onClick={() => changeLanguage("en")}
-                    className="flex items-center justify-center gap-1 font-bold text-xs md:text-sm py-2 border border-black  px-4 rounded-t rounded-x bg-white hover:bg-black hover:text-white"
-                  >
-                    <span>{t("languageEn")}</span>
-                    <img className="w-4" src="/assets/flags/united.svg" alt="united" />
-                  </button>
+            ) : (
+              <button
+                onClick={() => changeLanguage("en")}
+                className="w-24 flex items-center justify-center gap-1 font-bold text-xs md:text-sm py-2 border border-black  px-4 rounded bg-white hover:bg-black hover:text-white"
+              >
+                <span>{t("languageEn")}</span>
+                <img
+                  className="w-4"
+                  src="/assets/header/united.svg"
+                  alt="united"
+                />
+              </button>
+            )}
+            {isHovered && (
+              <>
+                {currentLanguage === "en" ? (
                   <button
                     onClick={() => changeLanguage("es")}
-                    className="flex items-center justify-center gap-1 font-bold text-xs md:text-sm py-2 border border-black  px-4  rounded-b rounded-x bg-white hover:bg-black hover:text-white"
+                    className="w-24 flex items-center justify-center gap-1 font-bold text-xs md:text-sm py-2 border border-black  px-4  rounded bg-white hover:bg-black hover:text-white"
                   >
                     <span>{t("languageEs")}</span>
-                    <img className="w-4" src="/assets/flags/spain.svg" alt="spain" />
+                    <img
+                      className="w-4"
+                      src="/assets/header/spain.svg"
+                      alt="spain"
+                    />
                   </button>
-                </div>
-              ) : (
-                <></>
-              )}
-            </div>
-            <button onClick={toggleCart} className="relative">
-        <Icon className="text-2xl" icon="icon-park-outline:shopping" />
-        <span className="absolute top-3 -right-3 text-black font-bold text-xs rounded-full px-[6px] py-[1px]">
-          {totalItemsInCart}
-        </span>
-      </button>
-          <div>
-          
-       {isOpen && (
-           <Cart toggleCart={toggleCart}/>
-       )}
+                ) : (
+                  <button
+                    onClick={() => changeLanguage("en")}
+                    className="w-24 flex items-center justify-center gap-1 font-bold text-xs md:text-sm py-2 border border-black  px-4  rounded bg-white hover:bg-black hover:text-white"
+                  >
+                    <span>{t("languageEn")}</span>
+                    <img
+                      className="w-4"
+                      src="/assets/header/united.svg"
+                      alt="united"
+                    />
+                  </button>
+                )}
+              </>
+            )}
           </div>
-          </div>
+
+          <button
+            onClick={toggleCart}
+            className="relative border border-black pl-1 pr-4 py-1 md:py-0  md:h-[5vh] rounded"
+          >
+            <img className="w-8" src={"/assets/header/cart.png"} alt="cart" />
+            {/* <Icon className="text-2xl" icon="icon-park-outline:shopping" /> */}
+            <span className="absolute top-5 md:top-4 right-1 font-bold text-[9px] md:text-[10px] rounded-full border border-black px-[4px]">
+              {totalItemsInCart}
+            </span>
+          </button>
+          <div>{isOpen && <Cart toggleCart={toggleCart} />}</div>
           <Burger />
         </div>
       </nav>

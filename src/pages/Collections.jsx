@@ -16,7 +16,7 @@ export default function Collections() {
   return (
     <>
       <Header />
-      <div className="montserrat px-[8vw] xl:px-[14vw] 2xl:px-[12vw]">
+      <div className="montserrat px-[8vw] xl:px-[8vw]">
         <div className="lg:flex lg:items-center justify-between my-10">
           <div className="text-start lg:text-start">
             <h2 className="font-bold text-[28px] lg:text-[30px]">{t("title")}</h2>
