@@ -6,6 +6,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Filter from "./Filter";
 import Category from "./Category";
 import { useState } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function ArtWork({ artworks }) {
 
@@ -39,7 +40,7 @@ export default function ArtWork({ artworks }) {
     {filteredArtworks.map(artwork => (
       <Link key={artwork.id} to={`/art/${artwork.id}`}>
         <li className="p-2">
-          <img src={artwork.image} alt={artwork.name} />
+          <img  src={artwork.image} alt={artwork.name} loading="lazy"/>
         </li>
       </Link>
     ))}
