@@ -17,7 +17,7 @@ export default function ArtWork({ artworks }) {
 
   const filterArtworks = (artworks) => {
     return artworks.filter((artwork) => {
-      const price = parseInt(artwork.price.replace("€", ""));
+      const price = artwork.price
       return (
         price >= filters.minPrice &&
         (filters.category === "all" || artwork.category === filters.category)

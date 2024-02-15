@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useCart } from "../context/CartContext";
 
 export default function ArtDetails() {
-  const { addToCart } = useCart();
+  const { addToCart, toggleCart } = useCart();
 
   function randomPaint(array) {
     let currentIndex = array.length,
@@ -131,7 +131,7 @@ export default function ArtDetails() {
           </div>
           <div className="flex flex-col gap-4 my-14">
             <button
-              onClick={handleAddToCart}
+              onClick={() => {handleAddToCart(); toggleCart();}}
               className="bg-black text-white  py-4 lg:py-2 lg:px-14 rounded-full 2xl:py-4 2xl:text-xl"
             >
               {t("purchase")}

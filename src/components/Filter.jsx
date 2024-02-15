@@ -24,7 +24,7 @@ export default function Filter({ setFilters }) {
         type="range" 
         id={minPriceFilterId}
         min="0" 
-        max="10000" 
+        max="5000" 
         onChange={handleChangeMinPrice} 
       />
       

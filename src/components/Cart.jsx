@@ -3,21 +3,23 @@ import { useCart } from "../context/CartContext";
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
+import { useTranslation } from "react-i18next";
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_API_KEY);
 
 export default function Cart({ toggleCart }) {
   const { items, clearCart } = useCart();
 
+  const { t } = useTranslation("common");
+
   const lineItems = items.map((item) => ({
     price_id: item.price_id,
-    quantity: item.quantity,
+    quantity: 1,
   }));
 
   const handleCheckout = async (event) => {
     event.preventDefault();
 
-    // Espera a que Stripe.js haya cargado
     const stripe = await stripePromise;
 
     const response = await fetch(import.meta.env.VITE_API_STRIPE_URL, {
@@ -38,6 +40,7 @@ export default function Cart({ toggleCart }) {
       console.log(result.error.message);
     }
   };
+  
 
   return (
     <div className="fixed right-5 top-5 w-72 bg-white p-5 rounded-lg shadow-md">
@@ -49,7 +52,9 @@ export default function Cart({ toggleCart }) {
       </button>
       <ul>
         {items.map((item) => (
+         
           <li key={item.id} className="flex mb-4 items-center">
+             {console.log(item)}
             <img
               src={item.image}
               alt={item.name}
@@ -57,14 +62,14 @@ export default function Cart({ toggleCart }) {
             />
             <div>
               <strong>{item.name}</strong> - {item.price}€<br />
-              <small className="text-gray-500">Cantidad: {item.quantity}</small>
+              <small className="text-gray-500">{t("quantity")}: {item.quantity}</small>
             </div>
           </li>
         ))}
       </ul>
       <div className="border-b border-gray-400">
         Total:{" "}
-        {items.reduce((acc, item) => acc + item.price * item.quantity, 0)}€
+        {items.reduce((acc, item) => acc + item.price, 0)}€
       </div>
 
       <div className="flex justify-between items-center">
@@ -72,7 +77,7 @@ export default function Cart({ toggleCart }) {
           onClick={handleCheckout}
           className="mt-4 bg-green-500 hover:bg-green-700 text-white text-sm py-2 px-3 rounded focus:outline-none focus:shadow-outline"
         >
-          Purchase
+          {t("purchase")}
         </button>
 
         <button

@@ -7,10 +7,11 @@
   "makeOffer": "Hacer una oferta",
   "moreArtworks": "Más Obras",
   "languageEs": "Español",
-    "languageEn": "Inglés",
-    "success_title": "Compra Exitosa",
-    "success_message": "¡Gracias por tu compra! Tu pedido de cuadros de pintura está siendo procesado y te enviaremos una confirmación a tu correo electrónico pronto.",
-    "button_text": "Volver a la Galería",
-    "cancel_title": "Pago Cancelado",
-    "cancel_message": "Parece que has cancelado el proceso de pago. Si tienes algún problema o pregunta, no dudes en contactarnos."
+  "languageEn": "Inglés",
+  "success_title": "Compra Exitosa",
+  "success_message": "¡Gracias por tu compra! Tu pedido de cuadros de pintura está siendo procesado y te enviaremos una confirmación a tu correo electrónico pronto.",
+  "button_text": "Volver a la Galería",
+  "cancel_title": "Pago Cancelado",
+  "cancel_message": "Parece que has cancelado el proceso de pago. Si tienes algún problema o pregunta, no dudes en contactarnos.",
+  "quantity": "Cantidad"
 }

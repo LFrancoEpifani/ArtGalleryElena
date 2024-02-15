@@ -9,17 +9,21 @@ export function useCart() {
 }
 
 export const CartProvider = ({ children }) => {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleCart = () => setIsOpen(!isOpen);
+
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (item) => {
     setCartItems((prevItems) => {
       const itemExists = prevItems.find((i) => i.id === item.id);
       if (itemExists) {
-        return prevItems.map((i) =>
-          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
-        );
+        return prevItems;
+      } else {
+        return [...prevItems, { ...item, quantity: 1 }];
       }
-      return [...prevItems, { ...item, quantity: 1 }];
+      
     });
   };
 
@@ -30,7 +34,9 @@ export const CartProvider = ({ children }) => {
   const value = {
     items: cartItems,
     addToCart,
-    clearCart, // Añade esta línea
+    clearCart,
+    isOpen,
+    toggleCart
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

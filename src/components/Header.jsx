@@ -9,6 +9,9 @@ import { useCart } from "../context/CartContext";
 import { getLanguage, setLanguage } from "../utils/language";
 
 export default function Header() {
+
+  const { items, isOpen, toggleCart } = useCart();
+
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -29,12 +32,6 @@ export default function Header() {
   const handleHoverLeave = () => {
     setIsHovered(false);
   };
-
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleCart = () => setIsOpen(!isOpen);
-
-  const { items } = useCart();
 
   const totalItemsInCart = items.reduce(
     (total, item) => total + item.quantity,
