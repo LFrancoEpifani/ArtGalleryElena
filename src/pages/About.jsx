@@ -28,11 +28,14 @@ import {
   scrollTextVariantsXRight,
 } from "../motion/variants";
 import testimonials from "../data/testimonials.json";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   const [testimonialsData, setTestimonialsData] = useState(testimonials);
+
+  const { t } = useTranslation('about');
 
   const containerRef = useRef(null);
   const [scrollPos, setScrollPos] = useState(0);
@@ -126,21 +129,7 @@ export default function About() {
                       Elena Salova
                     </h3>
                     <p className="text-center leading-5 md:leading-6 4xl:leading-9 my-4 text-[11px] md:text-[13px] 2xl:text-[14px] 4xl:text-[20px] text-gray-800 4xl:text-opacity-90">
-                      Elena&apos;s artistic journey blossomed amidst the
-                      picturesque landscapes of Novopskov in Ukraine&apos;s
-                      Luhansk region. Her earliest strokes foretold a lifetime
-                      of creative mastery. Between 2003 and 2005, she refined
-                      her skills at the esteemed Kyiv art courses of
-                      &quot;Oberig&quot;, emerging not only as an artist but
-                      also a nurturing guide for budding talents. Her artistic
-                      education continued at Odessa State Art College from 2004
-                      to 2009, earning her honors in painting, design, and
-                      decoration. In 2010, Elena ventured into monumental
-                      painting at the National Academy of Fine Arts and
-                      Architecture, under the tutelage of Professor Kozhekov.
-                      She mastered mosaic, fresco, sgraffito, and stained glass
-                      techniques. Her artistry spans classical and modern
-                      approaches, gracing collections worldwide.
+                      {t("elena")}
                     </p>
                     <div>
                       <Icon
@@ -175,30 +164,17 @@ export default function About() {
                       id="yoga"
                       className="sorts text-xl 4xl:text-4xl text-center uppercase"
                     >
-                      ART TEACHER & YOGA INSTRUCTOR
+                       {t("teacher")}
                     </h3>
                     <p className="text-center leading-5 md:leading-6 4xl:leading-9 my-4 text-[11px] md:text-[13px] 2xl:text-[14px] 4xl:text-[20px] text-gray-800 4xl:text-opacity-90">
-                      Elena, an experienced creative art teacher, brings 8 years
-                      of expertise to her role, focusing on instructing students
-                      in drawing, painting, sculpture, yoga, and meditation. She
-                      excels at adapting her teaching methods to cater to
-                      diverse learning styles. Elena fosters a deep
-                      understanding of artistic concepts and encourages the
-                      development of students creative and spiritual abilities.
-                      Her teaching is inspiring, offering a holistic art
-                      education program with practical exercises in various
-                      media. Elena provides constructive feedback, positive
-                      reinforcement, and gentle guidance, ensuring incremental
-                      improvement. She adeptly manages groups of up to 5
-                      students, ages 6 to 50, fostering a productive learning
-                      environment with detailed lesson plans.
+                      {t("teacher_text")}
                     </p>
 
                     {!isMobile && (
                       <a href="https://www.instagram.com/elena.art.studio.es/">
                         <button className="flex justify-center items-center gap-1 4xl:text-xl">
                           <p className="border-b-2 border-black">
-                            Send me a message
+                           {t("send")}
                           </p>
                           <Icon
                             className="text-xl"
@@ -231,24 +207,13 @@ export default function About() {
                       id="yoga"
                       className="sorts text-xl 4xl:text-4xl text-center uppercase"
                     >
-                      BIOGRAPHY
+                      {t("biography")}
                     </h3>
                     <p className="text-center leading-5 md:leading-6 4xl:leading-9 my-4 text-[11px]  md:text-[13px] 2xl:text-[14px] 4xl:text-[20px] text-gray-800 4xl:text-opacity-90">
-                      Elena, a Ukrainian artist from Novopskov, excelled in
-                      various painting techniques and studied at Kyiv&apos;s
-                      &quot;Oberig&quot; art courses, Odessa State Art College,
-                      and the National Academy of Fine Arts and Architecture,
-                      specializing in monumental painting. She mastered
-                      techniques like mosaic, fresco, and stained glass, and her
-                      works, featured in private collections across Europe,
-                      display a range from classical to modern styles. Her
-                      artistic achievements include exhibitions in notable
-                      galleries such as &quot;Illusion&quot; and
-                      &quot;Lavra&quot;. Since 2013, Elena has been imparting
-                      her knowledge as a painting and drawing teacher.
+                      {t("biography_text")}
                     </p>
                     <button className="flex justify-center items-center gap-1 4xl:text-xl">
-                      <p className="border-b-2 border-black">Work with me</p>
+                      <p className="border-b-2 border-black">{t("work")}</p>
                       <Icon
                         className="text-xl"
                         icon="iconamoon:arrow-top-right-1-light"

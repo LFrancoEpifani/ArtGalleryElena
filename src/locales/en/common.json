@@ -13,5 +13,6 @@
     "button_text": "Back to Gallery",
     "cancel_title": "Payment Cancelled",
     "cancel_message": "It seems you have cancelled the payment process. If you have any issues or questions, feel free to contact us.",
-    "quantity": "Quantity"
+    "quantity": "Quantity",
+    "rights": "All rights reserved"
 }
