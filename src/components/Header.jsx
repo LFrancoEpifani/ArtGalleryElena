@@ -10,7 +10,7 @@ import { getLanguage, setLanguage } from "../utils/language";
 
 export default function Header() {
 
-  const { items, isOpen, toggleCart } = useCart();
+  const { items, isOpen, setIsOpen } = useCart();
 
   const location = useLocation();
   const currentPath = location.pathname;
@@ -143,7 +143,7 @@ export default function Header() {
           </div>
 
           <button
-            onClick={toggleCart}
+            onClick={() => setIsOpen(true)}
             className="relative border border-black pl-1 pr-4 py-[1px] md:py-0  md:h-10 rounded"
           >
             <img className="w-8" src={"/assets/header/cart.png"} alt="cart" />
@@ -152,7 +152,7 @@ export default function Header() {
               {totalItemsInCart}
             </span>
           </button>
-          <div>{isOpen && <Cart toggleCart={toggleCart} />}</div>
+          <div>{isOpen && <Cart setIsOpen={setIsOpen} />}</div>
           <Burger />
         </div>
       </nav>

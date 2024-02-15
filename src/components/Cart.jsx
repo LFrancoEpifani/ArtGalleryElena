@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_API_KEY);
 
-export default function Cart({ toggleCart }) {
+export default function Cart({ setIsOpen }) {
   const { items, clearCart } = useCart();
 
   const { t } = useTranslation("common");
@@ -45,7 +45,7 @@ export default function Cart({ toggleCart }) {
   return (
     <div className="fixed right-5 top-5 w-72 bg-white p-5 rounded-lg shadow-md">
       <button
-        onClick={toggleCart}
+        onClick={() => setIsOpen(false)}
         className="absolute top-0 right-0 p-1 text-2xl"
       >
         <Icon icon="ei:close-o" />

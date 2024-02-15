@@ -11,7 +11,6 @@ export function useCart() {
 export const CartProvider = ({ children }) => {
 
   const [isOpen, setIsOpen] = useState(false);
-  const toggleCart = () => setIsOpen(!isOpen);
 
   const [cartItems, setCartItems] = useState([]);
 
@@ -36,7 +35,7 @@ export const CartProvider = ({ children }) => {
     addToCart,
     clearCart,
     isOpen,
-    toggleCart
+    setIsOpen,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
