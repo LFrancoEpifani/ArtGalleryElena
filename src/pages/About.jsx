@@ -27,15 +27,17 @@ import {
   scrollTextVariantsXLeft,
   scrollTextVariantsXRight,
 } from "../motion/variants";
-import testimonials from "../data/testimonials.json";
+import testimonialsEn from "../data/testimonialsEn.json";
+import testimonialsEs from "../data/testimonialsEs.json";
 import { useTranslation } from "react-i18next";
 
 export default function About() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
-  const [testimonialsData, setTestimonialsData] = useState(testimonials);
+  const [testimonialsData, setTestimonialsData] = useState(testimonialsEn);
 
-  const { t } = useTranslation('about');
+  const { t, i18n } = useTranslation("about");
+  const currentLanguage = i18n.language;
 
   const containerRef = useRef(null);
   const [scrollPos, setScrollPos] = useState(0);
@@ -98,6 +100,14 @@ export default function About() {
 
   const firstHalf = testimonialsData.slice(0, testimonialsData.length / 2);
   const secondHalf = testimonialsData.slice(testimonialsData.length / 2);
+
+  useEffect(() => {
+    if (currentLanguage === "en") {
+      setTestimonialsData(testimonialsEn);
+    } else {
+      setTestimonialsData(testimonialsEs);
+    }
+  }, [currentLanguage]);
 
   return (
     <>
@@ -164,7 +174,7 @@ export default function About() {
                       id="yoga"
                       className="sorts text-xl 4xl:text-4xl text-center uppercase"
                     >
-                       {t("teacher")}
+                      {t("teacher")}
                     </h3>
                     <p className="text-center leading-5 md:leading-6 4xl:leading-9 my-4 text-[11px] md:text-[13px] 2xl:text-[14px] 4xl:text-[20px] text-gray-800 4xl:text-opacity-90">
                       {t("teacher_text")}
@@ -173,9 +183,7 @@ export default function About() {
                     {!isMobile && (
                       <a href="https://www.instagram.com/elena.art.studio.es/">
                         <button className="flex justify-center items-center gap-1 4xl:text-xl">
-                          <p className="border-b-2 border-black">
-                           {t("send")}
-                          </p>
+                          <p className="border-b-2 border-black">{t("send")}</p>
                           <Icon
                             className="text-xl"
                             icon="iconamoon:arrow-top-right-1-light"
@@ -257,7 +265,9 @@ export default function About() {
           >
             {firstHalf.map((testimonial, index) => (
               <div key={testimonial.id} className="w-full text-center h-[20vh]">
-                <h3 className="text-xl 4xl:text-4xl font-bold my-4 4xl:my-10">{testimonial.title}</h3>
+                <h3 className="text-xl 4xl:text-4xl font-bold my-4 4xl:my-10">
+                  {testimonial.title}
+                </h3>
                 <p className="w-full px-4 leading-6 text-sm 4xl:text-xl">
                   {testimonial.text}
                 </p>
@@ -274,7 +284,9 @@ export default function About() {
           >
             {secondHalf.map((testimonial, index) => (
               <div key={testimonial.id} className="w-full text-center h-[20vh]">
-                <h3 className="text-xl 4xl:text-4xl font-bold my-4 4xl:my-10">{testimonial.title}</h3>
+                <h3 className="text-xl 4xl:text-4xl font-bold my-4 4xl:my-10">
+                  {testimonial.title}
+                </h3>
                 <p className="w-full px-4 leading-6 text-sm 4xl:text-xl">
                   {testimonial.text}
                 </p>
